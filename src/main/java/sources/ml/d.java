@@ -1,0 +1,13 @@
+package ml;
+
+import java.lang.reflect.Type;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes6.dex */
+public class d implements com.transsion.json.o {
+    public Object a(com.transsion.json.m mVar, Object obj, Type type, Class cls) {
+        if (obj instanceof Number) {
+            return Byte.valueOf(((Number) obj).byteValue());
+        }
+        throw mVar.q(obj, Byte.class);
+    }
+}

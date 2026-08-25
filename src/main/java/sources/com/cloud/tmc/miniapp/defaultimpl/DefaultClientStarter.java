@@ -1,0 +1,103 @@
+package com.cloud.tmc.miniapp.defaultimpl;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import com.cloud.tmc.integration.activity.StartClientBundle;
+import com.cloud.tmc.integration.model.PrepareContext;
+import com.cloud.tmc.integration.utils.AppPrepareUtils;
+import com.cloud.tmc.kernel.constants.TmcConstants;
+import com.cloud.tmc.kernel.log.TmcLogger;
+import com.cloud.tmc.kernel.utils.BundleUtils;
+import com.cloud.tmc.miniapp.NewTaskManager;
+import com.cloud.tmc.miniapp.prepare.controller.PrepareController;
+import com.cloud.tmc.miniapp.prepare.steps.o000oOoO;
+import com.cloud.tmc.miniapp.process.AppRecord;
+import com.cloud.tmc.miniapp.proxy.IClientStarter;
+import com.cloud.tmc.miniapp.utils.MiniAppLaunch;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes4.dex */
+public class DefaultClientStarter implements IClientStarter {
+    public static Long OooO0O0 = 1000L;
+    public Long OooO00o = null;
+
+    @Override // com.cloud.tmc.miniapp.proxy.IClientStarter
+    public synchronized Fragment createFragment(Context context, Bundle bundle) {
+        return null;
+    }
+
+    @Override // com.cloud.tmc.miniapp.proxy.IClientStarter
+    public PrepareController createPrepareController(PrepareContext prepareContext, o000oOoO o000oooo) {
+        return new com.cloud.tmc.miniapp.prepare.controller.OooO0O0(prepareContext, o000oooo);
+    }
+
+    @Override // com.cloud.tmc.miniapp.proxy.IClientStarter
+    @NonNull
+    public PrepareController createQuickModePrepareController(PrepareContext prepareContext, o000oOoO o000oooo) {
+        prepareContext.setVirtualStart(false);
+        return new com.cloud.tmc.miniapp.prepare.controller.OooO0OO(prepareContext, o000oooo);
+    }
+
+    @Override // com.cloud.tmc.miniapp.proxy.IClientStarter
+    @NonNull
+    public PrepareController createSubpackagePrepareController(PrepareContext prepareContext, o000oOoO o000oooo, int i, String str) {
+        return new com.cloud.tmc.miniapp.prepare.controller.OooO0o(prepareContext, o000oooo, i, str);
+    }
+
+    @Override // com.cloud.tmc.miniapp.proxy.IClientStarter
+    public PrepareController createWarmupController(PrepareContext prepareContext, o000oOoO o000oooo) {
+        prepareContext.setVirtualStart(true);
+        return new com.cloud.tmc.miniapp.prepare.controller.OooO00o(prepareContext, o000oooo);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.cloud.tmc.miniapp.proxy.IClientStarter
+    public Class<? extends Activity> startClient(Context context, Intent intent, Bundle bundle) {
+        Class cls;
+        StringBuilder OooO00o = com.cloud.tmc.miniapp.OooO00o.OooO00o("fromContext:");
+        OooO00o.append(context.getClass().getSimpleName());
+        TmcLogger.d("DefaultClientStarter", OooO00o.toString());
+        if (!(context instanceof Activity)) {
+            intent.addFlags(268435456);
+        }
+        StartClientBundle parcelable = BundleUtils.getParcelable(intent.getExtras(), TmcConstants.EXTRA_START_BUNDLE);
+        String stringExtra = intent.getStringExtra(TmcConstants.EXTRA_APP_ID);
+        long currentTimeMillis = System.currentTimeMillis();
+        if (intent.getFlags() == 536870912) {
+            Class cls2 = NewTaskManager.Companion.getInstance().checkOpenMutipleTask(stringExtra) ? context.getClass() : MiniAppLaunch.getMiniAppLaunchActivity(intent);
+            TmcLogger.d("DefaultClientStarter", "launch activity FLAG_ACTIVITY_SINGLE_TOP :" + cls2);
+            cls = cls2;
+        } else {
+            NewTaskManager.ActivityInfo preLaunchActivity = NewTaskManager.Companion.getInstance().preLaunchActivity(context, new AppRecord(stringExtra, parcelable.startParams, parcelable.sceneParams));
+            cls = preLaunchActivity == null ? MiniAppLaunch.getMiniAppLaunchActivity(intent) : preLaunchActivity.getActivityClazz();
+        }
+        if (cls != null) {
+            StringBuilder OooO00o2 = com.cloud.tmc.miniapp.OooO00o.OooO00o("target class:");
+            OooO00o2.append(cls.getSimpleName());
+            TmcLogger.d("DefaultClientStarter", OooO00o2.toString());
+        }
+        try {
+        } catch (Throwable th) {
+            TmcLogger.e("DefaultClientStarter", "startClient exception:", th);
+        }
+        if (this.OooO00o != null) {
+            if (System.currentTimeMillis() - this.OooO00o.longValue() > OooO0O0.longValue()) {
+            }
+            this.OooO00o = Long.valueOf(System.currentTimeMillis());
+            return cls;
+        }
+        intent.putExtra("record_id", stringExtra);
+        intent.putExtra("record_token", currentTimeMillis);
+        if (cls != null) {
+            intent.setClass(context, cls);
+        }
+        AppPrepareUtils.INSTANCE.addCommonIntentParameter(intent, context);
+        context.startActivity(intent, bundle);
+        TmcLogger.d("DefaultClientStarter", "start finish");
+        this.OooO00o = Long.valueOf(System.currentTimeMillis());
+        return cls;
+    }
+}

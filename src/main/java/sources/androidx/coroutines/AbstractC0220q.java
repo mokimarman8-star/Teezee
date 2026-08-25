@@ -1,0 +1,6 @@
+package androidx.coroutines;
+
+/* renamed from: androidx.work.q, reason: case insensitive filesystem */
+/* loaded from: /home/user/Teezee-git/app_source/classes2.dex */
+public abstract class AbstractC0220q {
+}

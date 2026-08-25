@@ -1,0 +1,20 @@
+package okhttp3.internal.connection;
+
+import com.vungle.ads.internal.protos.Sdk$SDKMetric;
+import kotlin.Metadata;
+import okhttp3.HttpUrl;
+import okio.AsyncTimeout;
+
+@Metadata(d1 = {"\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\b\u0010\u0002\u001a\u00020\u0003H\u0014¨\u0006\u0004"}, d2 = {"okhttp3/internal/connection/RealCall$timeout$1", "Lokio/AsyncTimeout;", "timedOut", HttpUrl.FRAGMENT_ENCODE_SET, "okhttp"}, k = 1, mv = {1, 8, 0}, xi = Sdk$SDKMetric.SDKMetricType.AD_SHOW_TO_VALIDATION_DURATION_MS_VALUE)
+/* loaded from: /home/user/Teezee-git/app_source/classes7.dex */
+public final class RealCall$timeout$1 extends AsyncTimeout {
+    final /* synthetic */ RealCall this$0;
+
+    RealCall$timeout$1(RealCall realCall) {
+        this.this$0 = realCall;
+    }
+
+    protected void timedOut() {
+        this.this$0.cancel();
+    }
+}

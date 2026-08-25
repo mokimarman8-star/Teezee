@@ -1,0 +1,20 @@
+package kotlin.jvm.internal;
+
+import com.vungle.ads.internal.protos.Sdk$SDKMetric;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import kotlin.Metadata;
+import kotlin.SinceKotlin;
+import okhttp3.HttpUrl;
+
+@Target({ElementType.TYPE})
+@SinceKotlin
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0002\b\u0004\b\u0087\u0002\u0018\u00002\u00020\u0001B\u0015\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002¢\u0006\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lkotlin/jvm/internal/SourceDebugExtension;", HttpUrl.FRAGMENT_ENCODE_SET, HttpUrl.FRAGMENT_ENCODE_SET, HttpUrl.FRAGMENT_ENCODE_SET, "value", "<init>", "(Lkotlin/Array;)V", "kotlin-stdlib"}, k = 1, mv = {2, 1, 0}, xi = Sdk$SDKMetric.SDKMetricType.AD_SHOW_TO_VALIDATION_DURATION_MS_VALUE)
+@kotlin.annotation.Target
+@Retention(RetentionPolicy.CLASS)
+@kotlin.annotation.Retention
+/* loaded from: /home/user/Teezee-git/app_source/classes7.dex */
+public @interface SourceDebugExtension {
+}

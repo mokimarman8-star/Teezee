@@ -1,0 +1,75 @@
+package com.iab.omid.library.hisavana;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes5.dex */
+public final class R$id {
+    public static int accessibility_action_clickable_span = 2131361850;
+    public static int accessibility_custom_action_0 = 2131361851;
+    public static int accessibility_custom_action_1 = 2131361852;
+    public static int accessibility_custom_action_10 = 2131361853;
+    public static int accessibility_custom_action_11 = 2131361854;
+    public static int accessibility_custom_action_12 = 2131361855;
+    public static int accessibility_custom_action_13 = 2131361856;
+    public static int accessibility_custom_action_14 = 2131361857;
+    public static int accessibility_custom_action_15 = 2131361858;
+    public static int accessibility_custom_action_16 = 2131361859;
+    public static int accessibility_custom_action_17 = 2131361860;
+    public static int accessibility_custom_action_18 = 2131361861;
+    public static int accessibility_custom_action_19 = 2131361862;
+    public static int accessibility_custom_action_2 = 2131361863;
+    public static int accessibility_custom_action_20 = 2131361864;
+    public static int accessibility_custom_action_21 = 2131361865;
+    public static int accessibility_custom_action_22 = 2131361866;
+    public static int accessibility_custom_action_23 = 2131361867;
+    public static int accessibility_custom_action_24 = 2131361868;
+    public static int accessibility_custom_action_25 = 2131361869;
+    public static int accessibility_custom_action_26 = 2131361870;
+    public static int accessibility_custom_action_27 = 2131361871;
+    public static int accessibility_custom_action_28 = 2131361872;
+    public static int accessibility_custom_action_29 = 2131361873;
+    public static int accessibility_custom_action_3 = 2131361874;
+    public static int accessibility_custom_action_30 = 2131361875;
+    public static int accessibility_custom_action_31 = 2131361876;
+    public static int accessibility_custom_action_4 = 2131361877;
+    public static int accessibility_custom_action_5 = 2131361878;
+    public static int accessibility_custom_action_6 = 2131361879;
+    public static int accessibility_custom_action_7 = 2131361880;
+    public static int accessibility_custom_action_8 = 2131361881;
+    public static int accessibility_custom_action_9 = 2131361882;
+    public static int action_container = 2131361897;
+    public static int action_divider = 2131361899;
+    public static int action_image = 2131361900;
+    public static int action_text = 2131361906;
+    public static int actions = 2131361907;
+    public static int async = 2131362004;
+    public static int blocking = 2131362050;
+    public static int chronometer = 2131362228;
+    public static int dialog_button = 2131362388;
+    public static int forever = 2131362712;
+    public static int icon = 2131362861;
+    public static int icon_group = 2131362869;
+    public static int info = 2131362916;
+    public static int italic = 2131362942;
+    public static int line1 = 2131363511;
+    public static int line3 = 2131363512;
+    public static int normal = 2131364063;
+    public static int notification_background = 2131364072;
+    public static int notification_main_column = 2131364077;
+    public static int notification_main_column_container = 2131364078;
+    public static int right_icon = 2131364364;
+    public static int right_side = 2131364367;
+    public static int tag_accessibility_actions = 2131364760;
+    public static int tag_accessibility_clickable_spans = 2131364761;
+    public static int tag_accessibility_heading = 2131364762;
+    public static int tag_accessibility_pane_title = 2131364763;
+    public static int tag_screen_reader_focusable = 2131364775;
+    public static int tag_transition_group = 2131364778;
+    public static int tag_unhandled_key_event_manager = 2131364779;
+    public static int tag_unhandled_key_listeners = 2131364780;
+    public static int text = 2131364787;
+    public static int text2 = 2131364788;
+    public static int time = 2131364811;
+    public static int title = 2131364818;
+
+    private R$id() {
+    }
+}

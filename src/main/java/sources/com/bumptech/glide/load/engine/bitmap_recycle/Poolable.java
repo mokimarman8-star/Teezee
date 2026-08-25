@@ -1,0 +1,6 @@
+package com.bumptech.glide.load.engine.bitmap_recycle;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes3.dex */
+interface Poolable {
+    void offer();
+}

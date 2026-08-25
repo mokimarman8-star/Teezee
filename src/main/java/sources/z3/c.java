@@ -1,0 +1,8 @@
+package z3;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes2.dex */
+public abstract /* synthetic */ class c {
+    public static void a(d dVar) {
+        dVar.A();
+    }
+}

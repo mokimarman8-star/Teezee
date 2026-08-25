@@ -1,0 +1,85 @@
+package com.transsion.wrapperad;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes7.dex */
+public final class R$drawable {
+    public static int ad_link_star = 2131230878;
+    public static int ad_shape_bg_0_0_8_8 = 2131230883;
+    public static int ad_shape_bg_activity = 2131230884;
+    public static int ad_shape_bg_banner = 2131230885;
+    public static int ad_shape_bg_bg_ad = 2131230886;
+    public static int ad_shape_bg_btn_01 = 2131230887;
+    public static int ad_shape_btn_02_bg = 2131230889;
+    public static int ad_shape_btn_04_bg = 2131230890;
+    public static int ad_shape_btn_05_bg = 2131230891;
+    public static int ad_shape_btn_06_bg = 2131230892;
+    public static int ad_shape_btn_07_bg = 2131230893;
+    public static int ad_shape_btn_08_bg = 2131230894;
+    public static int ad_shape_btn_09_bg = 2131230895;
+    public static int ad_shape_btn_100 = 2131230896;
+    public static int ad_shape_btn_10_bg = 2131230897;
+    public static int ad_shape_btn_11_bg = 2131230898;
+    public static int ad_shape_btn_12_bg = 2131230899;
+    public static int ad_shape_btn_13_bg = 2131230900;
+    public static int ad_shape_btn_14_bg = 2131230901;
+    public static int ad_shape_btn_15_bg = 2131230902;
+    public static int ad_shape_btn_16_bg = 2131230903;
+    public static int ad_shape_btn_17_bg = 2131230904;
+    public static int ad_shape_btn_4_bg = 2131230905;
+    public static int ad_shape_btn_bg = 2131230906;
+    public static int ad_shape_btn_download_bg = 2131230907;
+    public static int ad_shape_circle = 2131230908;
+    public static int ad_shape_dp_2_black_trans_50 = 2131230909;
+    public static int ad_shape_dp_4 = 2131230910;
+    public static int ad_shape_dp_8 = 2131230911;
+    public static int ad_shape_dp_8_bg_1 = 2131230912;
+    public static int ad_shape_dp_8_bg_2 = 2131230913;
+    public static int ad_shape_dp_8_black = 2131230914;
+    public static int ad_shape_dp_8_white_6 = 2131230915;
+    public static int ad_shape_imm_video_subject_bg = 2131230916;
+    public static int ad_shape_skip = 2131230917;
+    public static int ad_shape_store_mark_bg = 2131230918;
+    public static int ad_shape_tag = 2131230919;
+    public static int banner_gradient = 2131230932;
+    public static int bg_gradient_brand_4 = 2131230998;
+    public static int bg_shape_play_list_ad = 2131231150;
+    public static int bg_shape_r4_pink_50 = 2131231151;
+    public static int bg_shape_r4_white_10 = 2131231152;
+    public static int ic_arrow_down_black = 2131231430;
+    public static int ic_gift_white = 2131231489;
+    public static int ic_loading_white = 2131231516;
+    public static int long_vod_co_close = 2131231736;
+    public static int long_vod_co_refresh = 2131231737;
+    public static int long_vod_member_hd = 2131231739;
+    public static int long_vod_ps_bg_app_8_bg = 2131231740;
+    public static int long_vod_ps_btn_bg_1 = 2131231741;
+    public static int long_vod_ps_btn_bg_2 = 2131231742;
+    public static int long_vod_ps_link_16_bg = 2131231743;
+    public static int progress_bg = 2131232276;
+    public static int treasure_ad_bg_black_0_60_80_shape = 2131232584;
+    public static int treasure_ad_refresh = 2131232585;
+    public static int treasure_arrow_left_white = 2131232586;
+    public static int treasure_bg_1 = 2131232587;
+    public static int treasure_bg_4_brand_2_shape = 2131232588;
+    public static int treasure_bg_4_brand_shape = 2131232589;
+    public static int treasure_bg_4_ffffff_10_shape = 2131232590;
+    public static int treasure_bg_4_ffffff_shape = 2131232591;
+    public static int treasure_bg_6_ffffff_10_shape = 2131232592;
+    public static int treasure_bg_6_shape = 2131232593;
+    public static int treasure_close_1 = 2131232596;
+    public static int treasure_state_dialog_16_bg_shape = 2131232598;
+    public static int treasure_test_6 = 2131232599;
+    public static int treasure_tip_view = 2131232600;
+    public static int treasure_wheel_bg = 2131232601;
+    public static int treasure_wheel_center_indicator = 2131232602;
+    public static int treasure_wheel_close = 2131232603;
+    public static int treasure_wheel_spin_now_bg = 2131232604;
+    public static int treasure_wheel_state_bg_1 = 2131232605;
+    public static int treasure_wheel_state_content_bg = 2131232606;
+    public static int treasure_wheel_state_wing_left = 2131232607;
+    public static int treasure_wheel_state_wing_right = 2131232608;
+    public static int treasure_wheel_title2_bg = 2131232609;
+    public static int treasure_wheel_top_indicator = 2131232610;
+
+    private R$drawable() {
+    }
+}

@@ -1,0 +1,86 @@
+package com.transsion.postdetail;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes6.dex */
+public final class R$drawable {
+    public static int comment_delete_bg = 2131231214;
+    public static int comment_delete_btn_selector = 2131231215;
+    public static int comment_detail_location_icon = 2131231216;
+    public static int comment_edit_cursor = 2131231217;
+    public static int comment_input_edit_bg = 2131231219;
+    public static int comment_item_like_selector = 2131231220;
+    public static int ic_like_comment_normal = 2131231511;
+    public static int ic_player_float = 2131231557;
+    public static int ic_player_setting = 2131231562;
+    public static int ic_player_speed = 2131231563;
+    public static int ic_post_download = 2131231565;
+    public static int ic_post_video_volume_mute = 2131231573;
+    public static int ic_post_video_volume_open = 2131231574;
+    public static int ic_ugc_detail_download_view = 2131231640;
+    public static int ic_ugc_detail_help = 2131231641;
+    public static int ic_ugc_detail_setting = 2131231642;
+    public static int icon_comment_empty = 2131231654;
+    public static int icon_post_select_image = 2131231660;
+    public static int player_delete_btn_selector = 2131232171;
+    public static int player_delete_video_bg = 2131232172;
+    public static int player_selector_lock = 2131232174;
+    public static int post_bg_module_01_8dp = 2131232176;
+    public static int post_comment_image_delete_icon = 2131232177;
+    public static int post_detail_episode_bg = 2131232180;
+    public static int post_detail_gradient_bottom_50 = 2131232181;
+    public static int post_detail_gradient_up_50 = 2131232182;
+    public static int post_detail_group_bg = 2131232183;
+    public static int post_detail_group_v2_bg = 2131232184;
+    public static int post_detail_ic_video_downloaded = 2131232185;
+    public static int post_detail_ic_video_downloading = 2131232186;
+    public static int post_detail_imm_video_clip_progress = 2131232187;
+    public static int post_detail_imm_video_like = 2131232188;
+    public static int post_detail_imm_video_progress = 2131232189;
+    public static int post_detail_imm_video_scrollbar_thumb = 2131232190;
+    public static int post_detail_layer_seekbar = 2131232192;
+    public static int post_detail_layer_seekbar_home = 2131232193;
+    public static int post_detail_selector_feed_video_volume = 2131232194;
+    public static int post_detail_selector_short_tv_favorite = 2131232195;
+    public static int post_detail_selector_short_tv_favorite_big = 2131232196;
+    public static int post_detail_shape_1_8dp = 2131232210;
+    public static int post_detail_shape_30black_15dp = 2131232211;
+    public static int post_detail_shape_black_trans70_8dp = 2131232212;
+    public static int post_detail_shape_bv_bg = 2131232213;
+    public static int post_detail_shape_download_pause_bg = 2131232214;
+    public static int post_detail_shape_imm_video_subject_bg = 2131232215;
+    public static int post_detail_shape_local_bottom_bg = 2131232216;
+    public static int post_detail_shape_local_top_bg = 2131232217;
+    public static int post_detail_shape_seekbar_bar = 2131232218;
+    public static int post_detail_shape_seekbar_bar_home = 2131232219;
+    public static int post_detail_shape_short_tv_ad_tips_bg = 2131232220;
+    public static int post_detail_shape_short_tv_dialog_bottom_bg = 2131232221;
+    public static int post_detail_short_tv_episode_bg = 2131232246;
+    public static int post_detail_short_tv_favorite_sel = 2131232247;
+    public static int post_detail_short_tv_favorite_unsel = 2131232248;
+    public static int post_detail_short_tv_lock = 2131232249;
+    public static int post_detail_short_tv_playing = 2131232250;
+    public static int post_detail_video_middle_ep_item_bg = 2131232256;
+    public static int post_feed_video_progress = 2131232257;
+    public static int post_icon_arrow_right = 2131232258;
+    public static int post_icon_full_screen = 2131232259;
+    public static int post_icon_pause = 2131232260;
+    public static int post_icon_play = 2131232261;
+    public static int post_icon_pro_pause = 2131232262;
+    public static int post_icon_pro_play = 2131232263;
+    public static int post_shape_translate_6dp = 2131232265;
+    public static int post_video_play = 2131232266;
+    public static int post_view_count_down_12 = 2131232267;
+    public static int room_cache_end_refresh_icon = 2131232305;
+    public static int room_home_list_pics_num_bg = 2131232308;
+    public static int room_home_list_staggered_item_bg = 2131232309;
+    public static int room_list_pics_left_icon = 2131232311;
+    public static int room_list_video_play_icon = 2131232312;
+    public static int rotate = 2131232315;
+    public static int shape_short_tv_banner_bottom_bg = 2131232424;
+    public static int shape_short_tv_category_bg = 2131232425;
+    public static int short_tv_bg_radius_8_color_white = 2131232467;
+    public static int trending_tag_bg = 2131232611;
+    public static int view_count_down_back = 2131232750;
+
+    private R$drawable() {
+    }
+}

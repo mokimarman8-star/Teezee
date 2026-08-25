@@ -1,0 +1,60 @@
+package com.mbridge.msdk.foundation.same;
+
+import com.hisavana.common.tracking.TrackingKey;
+import com.mbridge.msdk.MBridgeConstans;
+import com.mbridge.msdk.foundation.tools.h0;
+import com.mbridge.msdk.playercommon.exoplayer2.text.ttml.TtmlNode;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes5.dex */
+public class a {
+    public static final String a = h0.a("Z3Bzdg==");
+    public static final String b = h0.a("Z3B2");
+    public static final String c = h0.a("Z3BfdmVyc2lvbg==");
+    public static String d = "2.4";
+    public static String e = TtmlNode.ANONYMOUS_REGION_ID;
+    public static String f = TtmlNode.ANONYMOUS_REGION_ID;
+    public static String g = TtmlNode.ANONYMOUS_REGION_ID;
+    public static String h = TrackingKey.CLICK_X;
+    public static String i = TrackingKey.CLICK_Y;
+    public static String j = "cta_click_info";
+    public static String k = "click_ori";
+    public static String l = "click_scale";
+    public static String m = "click_senario";
+    public static String n = "mbridge";
+    public static int o = 30000;
+    public static int p = 10000;
+    public static int q = 30000;
+    public static int r = 3;
+    public static int s = 30000;
+    public static int t = 30000;
+    public static int u = 30000;
+    public static int v = 30000;
+    public static String w = "1";
+    public static int x = 1;
+    public static boolean y = false;
+    public static boolean z = false;
+    public static boolean A = false;
+    public static boolean B = false;
+    public static String C = MBridgeConstans.API_REUQEST_CATEGORY_APP;
+    public static int D = 3;
+    public static int E = 2;
+    public static int F = 1;
+    public static int G = 0;
+    public static int H = 10078;
+    public static int I = 10079;
+    public static int J = 10080;
+    public static int K = 10081;
+    public static int L = 60000;
+    public static int M = 3;
+    public static int N = 5;
+    public static int O = 0;
+    public static int P = 2;
+    public static int Q = 1;
+    public static int R = 4;
+    public static String S = MBridgeConstans.ENDCARD_URL_TYPE_PL;
+    public static String T = TtmlNode.ANONYMOUS_REGION_ID;
+    public static String U = TtmlNode.ANONYMOUS_REGION_ID;
+    public static String V = TtmlNode.ANONYMOUS_REGION_ID;
+    public static int W = 2;
+    public static int X = 2;
+}

@@ -1,0 +1,30 @@
+package com.cloud.tmc.integration.performance.innerworker;
+
+import android.app.Application;
+import com.cloud.tmc.integration.BuildConfig;
+import com.cloud.tmc.integration.model.PrepareCallbackParam;
+import com.cloud.tmc.kernel.annotation.DefaultImpl;
+import com.cloud.tmc.kernel.proxy.Proxiable;
+import com.cloud.tmc.kernel.worker.JSI;
+import kotlin.Metadata;
+
+@DefaultImpl("com.cloud.tmc.integration.performance.innerworker.InnerWorkerPool")
+@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\bg\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0003H&J\b\u0010\u0005\u001a\u00020\u0006H&J\u0014\u0010\u0007\u001a\u0004\u0018\u00010\b2\b\u0010\t\u001a\u0004\u0018\u00010\nH&J\u0010\u0010\u000b\u001a\u00020\u00062\u0006\u0010\f\u001a\u00020\rH&J\b\u0010\u000e\u001a\u00020\u0006H&J\u001a\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0010\u001a\u00020\u00112\b\u0010\t\u001a\u0004\u0018\u00010\nH&J\u0010\u0010\u0012\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\nH&J\u0012\u0010\u0014\u001a\u00020\u00062\b\u0010\u0015\u001a\u0004\u0018\u00010\u0016H&¨\u0006\u0017"}, d2 = {"Lcom/cloud/tmc/integration/performance/innerworker/IInnerWorkerPool;", "Lcom/cloud/tmc/kernel/proxy/Proxiable;", "createWorker", "", "sync", "destroy", "", "getWorker", "Lcom/cloud/tmc/kernel/worker/JSI;", "frameworkVersion", "", "init", "context", "Landroid/app/Application;", "preWarmupWorkerFail", "registerListener", "listener", "Lcom/cloud/tmc/integration/performance/innerworker/InnerWorkerListener;", "removeWorker", "workerId", "warmupWorker", "param", "Lcom/cloud/tmc/integration/model/PrepareCallbackParam;", BuildConfig.LIBRARY_PACKAGE_NAME}, k = 1, mv = {1, 8, 0}, xi = 48)
+/* loaded from: /home/user/Teezee-git/app_source/classes3.dex */
+public interface IInnerWorkerPool extends Proxiable {
+    boolean createWorker(boolean sync);
+
+    void destroy();
+
+    JSI getWorker(String frameworkVersion);
+
+    void init(Application context);
+
+    void preWarmupWorkerFail();
+
+    void registerListener(InnerWorkerListener listener, String frameworkVersion);
+
+    void removeWorker(String workerId);
+
+    void warmupWorker(PrepareCallbackParam param);
+}

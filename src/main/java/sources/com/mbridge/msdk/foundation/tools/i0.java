@@ -1,0 +1,157 @@
+package com.mbridge.msdk.foundation.tools;
+
+import android.text.TextUtils;
+import com.mbridge.msdk.playercommon.exoplayer2.text.ttml.TtmlNode;
+import java.util.HashMap;
+import java.util.Map;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes5.dex */
+public class i0 {
+    private static Map<Character, Character> a;
+    private static Map<Character, Character> b;
+    private static byte[] c = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -1, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1};
+    private static char[] d = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'};
+
+    static {
+        HashMap hashMap = new HashMap();
+        a = hashMap;
+        hashMap.put('v', 'A');
+        a.put('S', 'B');
+        a.put('o', 'C');
+        a.put('a', 'D');
+        a.put('j', 'E');
+        a.put('c', 'F');
+        a.put('7', 'G');
+        a.put('d', 'H');
+        a.put('R', 'I');
+        a.put('z', 'J');
+        a.put('p', 'K');
+        a.put('W', 'L');
+        a.put('i', 'M');
+        a.put('f', 'N');
+        a.put('G', 'O');
+        a.put('y', 'P');
+        a.put('N', 'Q');
+        a.put('x', 'R');
+        a.put('Z', 'S');
+        a.put('n', 'T');
+        a.put('V', 'U');
+        a.put('5', 'V');
+        a.put('k', 'W');
+        a.put('+', 'X');
+        a.put('D', 'Y');
+        a.put('H', 'Z');
+        a.put('L', 'a');
+        a.put('Y', 'b');
+        a.put('h', 'c');
+        a.put('J', 'd');
+        a.put('4', 'e');
+        a.put('6', 'f');
+        a.put('l', 'g');
+        a.put('t', 'h');
+        a.put('0', 'i');
+        a.put('U', 'j');
+        a.put('3', 'k');
+        a.put('Q', 'l');
+        a.put('r', 'm');
+        a.put('g', 'n');
+        a.put('E', 'o');
+        a.put('u', 'p');
+        a.put('q', 'q');
+        a.put('8', 'r');
+        a.put('s', 's');
+        a.put('w', 't');
+        a.put('/', 'u');
+        a.put('X', 'v');
+        a.put('M', 'w');
+        a.put('e', 'x');
+        a.put('B', 'y');
+        a.put('A', 'z');
+        a.put('T', '0');
+        a.put('2', '1');
+        a.put('F', '2');
+        a.put('b', '3');
+        a.put('9', '4');
+        a.put('P', '5');
+        a.put('1', '6');
+        a.put('O', '7');
+        a.put('I', '8');
+        a.put('K', '9');
+        a.put('m', '+');
+        a.put('C', '/');
+        HashMap hashMap2 = new HashMap();
+        b = hashMap2;
+        hashMap2.put('A', 'v');
+        b.put('B', 'S');
+        b.put('C', 'o');
+        b.put('D', 'a');
+        b.put('E', 'j');
+        b.put('F', 'c');
+        b.put('G', '7');
+        b.put('H', 'd');
+        b.put('I', 'R');
+        b.put('J', 'z');
+        b.put('K', 'p');
+        b.put('L', 'W');
+        b.put('M', 'i');
+        b.put('N', 'f');
+        b.put('O', 'G');
+        b.put('P', 'y');
+        b.put('Q', 'N');
+        b.put('R', 'x');
+        b.put('S', 'Z');
+        b.put('T', 'n');
+        b.put('U', 'V');
+        b.put('V', '5');
+        b.put('W', 'k');
+        b.put('X', '+');
+        b.put('Y', 'D');
+        b.put('Z', 'H');
+        b.put('a', 'L');
+        b.put('b', 'Y');
+        b.put('c', 'h');
+        b.put('d', 'J');
+        b.put('e', '4');
+        b.put('f', '6');
+        b.put('g', 'l');
+        b.put('h', 't');
+        b.put('i', '0');
+        b.put('j', 'U');
+        b.put('k', '3');
+        b.put('l', 'Q');
+        b.put('m', 'r');
+        b.put('n', 'g');
+        b.put('o', 'E');
+        b.put('p', 'u');
+        b.put('q', 'q');
+        b.put('r', '8');
+        b.put('s', 's');
+        b.put('t', 'w');
+        b.put('u', '/');
+        b.put('v', 'X');
+        b.put('w', 'M');
+        b.put('x', 'e');
+        b.put('y', 'B');
+        b.put('z', 'A');
+        b.put('0', 'T');
+        b.put('1', '2');
+        b.put('2', 'F');
+        b.put('3', 'b');
+        b.put('4', '9');
+        b.put('5', 'P');
+        b.put('6', '1');
+        b.put('7', 'O');
+        b.put('8', 'I');
+        b.put('9', 'K');
+        b.put('+', 'm');
+        b.put('/', 'C');
+    }
+
+    public static String a(String str) {
+        return p0.b(str);
+    }
+
+    public static String b(String str) {
+        return TextUtils.isEmpty(str) ? TtmlNode.ANONYMOUS_REGION_ID : p0.c(str);
+    }
+}

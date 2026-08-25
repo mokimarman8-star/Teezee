@@ -1,0 +1,85 @@
+package com.tn.lib.widget;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes.dex */
+public final class R$mipmap {
+    public static int bg_network_view = 2131689526;
+    public static int bg_no_network = 2131689527;
+    public static int ic_arrow_right = 2131689588;
+    public static int ic_arrow_right_white = 2131689589;
+    public static int ic_arrow_up_white = 2131689591;
+    public static int ic_btn_arrow_transparent = 2131689610;
+    public static int ic_history_clear = 2131689669;
+    public static int ic_home_join = 2131689670;
+    public static int ic_img_placeholder = 2131689674;
+    public static int ic_member = 2131689688;
+    public static int ic_mine_novel = 2131689697;
+    public static int ic_mine_novel_download = 2131689698;
+    public static int ic_mine_novel_history = 2131689699;
+    public static int ic_mine_novel_library = 2131689700;
+    public static int ic_no_content = 2131689708;
+    public static int ic_no_content_dark = 2131689709;
+    public static int ic_no_error = 2131689710;
+    public static int ic_no_net_new = 2131689711;
+    public static int ic_no_network = 2131689712;
+    public static int ic_no_network_tips_1 = 2131689713;
+    public static int ic_no_network_tips_2 = 2131689714;
+    public static int ic_no_network_tips_3 = 2131689715;
+    public static int ic_no_permission = 2131689716;
+    public static int ic_notice_mine = 2131689717;
+    public static int ic_play_round = 2131689731;
+    public static int ic_play_transparent = 2131689733;
+    public static int ic_poins_new = 2131689737;
+    public static int ic_point_purchase = 2131689738;
+    public static int ic_right_black = 2131689776;
+    public static int ic_room_join_def = 2131689777;
+    public static int ic_room_join_def_new = 2131689778;
+    public static int ic_room_join_def_white = 2131689779;
+    public static int ic_room_join_loading = 2131689780;
+    public static int ic_room_join_loading_new = 2131689781;
+    public static int ic_room_join_view = 2131689782;
+    public static int ic_room_join_view_new = 2131689783;
+    public static int ic_transfer_tips_hint = 2131689855;
+    public static int ic_vip_20 = 2131689864;
+    public static int icon_play_white = 2131689874;
+    public static int icon_room_cache_end = 2131689878;
+    public static int icon_room_cache_loading = 2131689879;
+    public static int icon_room_cache_start = 2131689880;
+    public static int icon_white_back = 2131689885;
+    public static int info_player_ic_collapse = 2131689903;
+    public static int info_player_ic_expand = 2131689904;
+    public static int join_right = 2131689907;
+    public static int libui_ic_back_black = 2131689917;
+    public static int libui_ic_base_black_left = 2131689918;
+    public static int libui_ic_base_black_publish = 2131689919;
+    public static int libui_ic_base_black_share = 2131689920;
+    public static int libui_ic_base_whit_left = 2131689921;
+    public static int libui_ic_base_whit_publish = 2131689922;
+    public static int libui_ic_base_whit_share = 2131689923;
+    public static int libui_ic_basic_close_white = 2131689924;
+    public static int libui_ic_checked = 2131689925;
+    public static int libui_ic_close_dialog = 2131689926;
+    public static int libui_ic_down_more = 2131689927;
+    public static int libui_ic_edit = 2131689928;
+    public static int libui_ic_more = 2131689929;
+    public static int libui_ic_more_small_base_color = 2131689930;
+    public static int libui_ic_unchecked = 2131689931;
+    public static int libui_ic_up_hide = 2131689932;
+    public static int libui_iv_close_circle = 2131689933;
+    public static int libui_upload_error_image = 2131689934;
+    public static int loading_1_whit = 2131689935;
+    public static int loading_2_red = 2131689936;
+    public static int loading_3_gray = 2131689937;
+    public static int loading_green_dark = 2131689938;
+    public static int loading_green_light = 2131689939;
+    public static int login_arrow_down = 2131689940;
+    public static int logo_about_us = 2131689964;
+    public static int no_wifi_tip = 2131690015;
+    public static int no_wifi_tip_big = 2131690016;
+    public static int profile_camera = 2131690060;
+    public static int profile_default_avatar = 2131690061;
+    public static int profile_et_clear_fill = 2131690063;
+    public static int profile_setting_right = 2131690072;
+
+    private R$mipmap() {
+    }
+}

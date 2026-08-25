@@ -1,0 +1,168 @@
+package com.cloud.tmc.miniapp.widget;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.cloud.tmc.kernel.bridge.RenderCallContext;
+import com.cloud.tmc.kernel.log.TmcLogger;
+import com.cloud.tmc.miniapp.R;
+import com.cloud.tmc.miniutils.util.ViewUtils;
+import kotlin.Lazy;
+import kotlin.LazyKt;
+import kotlin.Unit;
+import kotlin.jvm.JvmOverloads;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+import kotlin.jvm.internal.SourceDebugExtension;
+
+@SourceDebugExtension
+/* loaded from: /home/user/Teezee-git/app_source/classes4.dex */
+public final class NativeTitleBar extends ConstraintLayout {
+    public final Lazy OooO00o;
+    public final Lazy OooO0O0;
+    public final Lazy OooO0OO;
+    public Function0<Unit> OooO0Oo;
+
+    public static final class OooO00o extends Lambda implements Function0<FrameLayout> {
+        public OooO00o() {
+            super(0);
+        }
+
+        public Object invoke() {
+            return (FrameLayout) NativeTitleBar.this.findViewById(R.id.fl_title_back);
+        }
+    }
+
+    public static final class OooO0O0 extends Lambda implements Function0<TextView> {
+        public OooO0O0() {
+            super(0);
+        }
+
+        public Object invoke() {
+            return (TextView) NativeTitleBar.this.findViewById(R.id.tv_title);
+        }
+    }
+
+    public static final class OooO0OO extends Lambda implements Function0<View> {
+        public OooO0OO() {
+            super(0);
+        }
+
+        public Object invoke() {
+            return NativeTitleBar.this.findViewById(R.id.view_title_line);
+        }
+    }
+
+    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    @JvmOverloads
+    public NativeTitleBar(Context context) {
+        this(context, null, 0, 0, 14, null);
+        Intrinsics.h(context, "context");
+    }
+
+    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    @JvmOverloads
+    public NativeTitleBar(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, 0, 0, 12, null);
+        Intrinsics.h(context, "context");
+    }
+
+    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    @JvmOverloads
+    public NativeTitleBar(Context context, AttributeSet attributeSet, int i) {
+        this(context, attributeSet, i, 0, 8, null);
+        Intrinsics.h(context, "context");
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /* JADX WARN: Multi-variable type inference failed */
+    @JvmOverloads
+    public NativeTitleBar(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
+        Intrinsics.h(context, "context");
+        this.OooO00o = LazyKt.b(new OooO00o());
+        this.OooO0O0 = LazyKt.b(new OooO0O0());
+        this.OooO0OO = LazyKt.b(new OooO0OO());
+        try {
+            LayoutInflater.from(context).inflate(R.layout.mini_layout_native_title_bar, (ViewGroup) this);
+            TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.styleable.Mini_NativeTitleBar);
+            Intrinsics.g(obtainStyledAttributes, "getContext().obtainStyle…able.Mini_NativeTitleBar)");
+            if (obtainStyledAttributes.hasValue(R.styleable.Mini_NativeTitleBar_bar_title)) {
+                setTitle(obtainStyledAttributes.getString(R.styleable.Mini_NativeTitleBar_bar_title));
+            }
+            if (obtainStyledAttributes.hasValue(R.styleable.Mini_NativeTitleBar_bar_line)) {
+                setLineVisible(obtainStyledAttributes.getBoolean(R.styleable.Mini_NativeTitleBar_bar_line, true));
+            }
+            obtainStyledAttributes.recycle();
+            if (!isInEditMode()) {
+                getMFlTitleBack().setRotationY(ViewUtils.isLayoutRtl() ? 180.0f : 0.0f);
+            }
+            getMFlTitleBack().setOnClickListener(new View.OnClickListener() { // from class: com.cloud.tmc.miniapp.widget.k
+                @Override // android.view.View.OnClickListener
+                public final void onClick(View view) {
+                    NativeTitleBar.OooO00o(NativeTitleBar.this, view);
+                }
+            });
+        } catch (Throwable unused) {
+        }
+    }
+
+    public /* synthetic */ NativeTitleBar(Context context, AttributeSet attributeSet, int i, int i2, int i3, DefaultConstructorMarker defaultConstructorMarker) {
+        this(context, (i3 & 2) != 0 ? null : attributeSet, (i3 & 4) != 0 ? 0 : i, (i3 & 8) != 0 ? 0 : i2);
+    }
+
+    public static final void OooO00o(NativeTitleBar nativeTitleBar, View view) {
+        Intrinsics.h(nativeTitleBar, "this$0");
+        Function0<Unit> function0 = nativeTitleBar.OooO0Oo;
+        if (function0 != null) {
+            function0.invoke();
+        }
+    }
+
+    private final FrameLayout getMFlTitleBack() {
+        Object value = this.OooO00o.getValue();
+        Intrinsics.g(value, "<get-mFlTitleBack>(...)");
+        return (FrameLayout) value;
+    }
+
+    private final TextView getMTvTitle() {
+        Object value = this.OooO0O0.getValue();
+        Intrinsics.g(value, "<get-mTvTitle>(...)");
+        return (TextView) value;
+    }
+
+    private final View getMViewTitleLine() {
+        Object value = this.OooO0OO.getValue();
+        Intrinsics.g(value, "<get-mViewTitleLine>(...)");
+        return (View) value;
+    }
+
+    public final void setLineVisible(boolean z) {
+        getMViewTitleLine().setVisibility(z ? 0 : 8);
+    }
+
+    public final void setTitle(String str) {
+        getMTvTitle().setText(str);
+    }
+
+    public final void setTitleLineHeight(int i) {
+        try {
+            getMViewTitleLine().getLayoutParams().height = i;
+        } catch (Throwable th) {
+            TmcLogger.e("", th);
+        }
+    }
+
+    public final void setonBackClickListener(Function0<Unit> function0) {
+        Intrinsics.h(function0, RenderCallContext.TYPE_CALLBACK);
+        this.OooO0Oo = function0;
+    }
+}

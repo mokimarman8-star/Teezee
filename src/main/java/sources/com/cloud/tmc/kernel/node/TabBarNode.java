@@ -1,0 +1,48 @@
+package com.cloud.tmc.kernel.node;
+
+import com.cloud.tmc.kernel.BuildConfig;
+import com.google.gson.JsonArray;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+
+@Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0003H&J\u0010\u0010\u0005\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0007H&J\u0010\u0010\b\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0007H&J\u0010\u0010\t\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0007H&J\u001a\u0010\n\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u00072\b\u0010\u000b\u001a\u0004\u0018\u00010\fH&J.\u0010\r\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u00072\b\u0010\u000e\u001a\u0004\u0018\u00010\f2\b\u0010\u000f\u001a\u0004\u0018\u00010\f2\b\u0010\u0010\u001a\u0004\u0018\u00010\fH&J\u0010\u0010\u0011\u001a\u00020\u00032\u0006\u0010\u0012\u001a\u00020\u0013H&J0\u0010\u0014\u001a\u00020\u00032\b\u0010\u0015\u001a\u0004\u0018\u00010\f2\b\u0010\u0016\u001a\u0004\u0018\u00010\f2\b\u0010\u0017\u001a\u0004\u0018\u00010\f2\b\u0010\u0018\u001a\u0004\u0018\u00010\fH&J\u0010\u0010\u0019\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0003H&J\u0010\u0010\u001a\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0007H&J0\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u000f\u001a\u00020\f2\u0016\b\u0002\u0010\u001d\u001a\u0010\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u001c\u0018\u00010\u001eH&¨\u0006\u001f"}, d2 = {"Lcom/cloud/tmc/kernel/node/TabBarNode;", "", "hideTabBar", "", "animation", "hideTabBarRedDot", "index", "", "hideTabBarUnreadIcon", "removeTabBarBadge", "setTabBarBadge", "badgeText", "", "setTabBarItem", "text", "iconPath", "selectedIconPath", "setTabBarItems", "tabs", "Lcom/google/gson/JsonArray;", "setTabBarStyle", "color", "selectedColor", "backgroundColor", "borderStyle", "showTabBar", "showTabBarRedDot", "showTabBarUnreadIcon", "", "block", "Lkotlin/Function1;", BuildConfig.LIBRARY_PACKAGE_NAME}, k = 1, mv = {1, 8, 0}, xi = 48)
+/* loaded from: /home/user/Teezee-git/app_source/classes4.dex */
+public interface TabBarNode {
+
+    @Metadata(k = 3, mv = {1, 8, 0}, xi = 48)
+    public static final class DefaultImpls {
+        /* JADX WARN: Multi-variable type inference failed */
+        public static /* synthetic */ void showTabBarUnreadIcon$default(TabBarNode tabBarNode, int i, String str, Function1 function1, int i2, Object obj) {
+            if (obj != null) {
+                throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: showTabBarUnreadIcon");
+            }
+            if ((i2 & 4) != 0) {
+                function1 = null;
+            }
+            tabBarNode.showTabBarUnreadIcon(i, str, function1);
+        }
+    }
+
+    boolean hideTabBar(boolean animation);
+
+    boolean hideTabBarRedDot(int index);
+
+    boolean hideTabBarUnreadIcon(int index);
+
+    boolean removeTabBarBadge(int index);
+
+    boolean setTabBarBadge(int index, String badgeText);
+
+    boolean setTabBarItem(int index, String text, String iconPath, String selectedIconPath);
+
+    boolean setTabBarItems(JsonArray tabs);
+
+    boolean setTabBarStyle(String color, String selectedColor, String backgroundColor, String borderStyle);
+
+    boolean showTabBar(boolean animation);
+
+    boolean showTabBarRedDot(int index);
+
+    void showTabBarUnreadIcon(int index, String iconPath, Function1<? super Boolean, Unit> block);
+}

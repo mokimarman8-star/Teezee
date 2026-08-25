@@ -1,0 +1,5 @@
+package com.transsion.player.control;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes6.dex */
+public interface c {
+}

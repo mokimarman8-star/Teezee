@@ -1,0 +1,77 @@
+package com.transsion.shorttv_pugc.bean;
+
+import com.google.gson.annotations.SerializedName;
+import com.vungle.ads.internal.protos.Sdk$SDKMetric;
+import java.io.Serializable;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import okhttp3.HttpUrl;
+
+@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0003\b\u0086\b\u0018\u00002\u00020\u0001B\u0019\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0005¢\u0006\u0004\b\u0006\u0010\u0007J\t\u0010\f\u001a\u00020\u0003HÆ\u0003J\u000b\u0010\r\u001a\u0004\u0018\u00010\u0005HÆ\u0003J\u001f\u0010\u000e\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005HÆ\u0001J\u0013\u0010\u000f\u001a\u00020\u00102\b\u0010\u0011\u001a\u0004\u0018\u00010\u0012HÖ\u0003J\t\u0010\u0013\u001a\u00020\u0003HÖ\u0001J\t\u0010\u0014\u001a\u00020\u0005HÖ\u0001R\u0016\u0010\u0002\u001a\u00020\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0018\u0010\u0004\u001a\u0004\u0018\u00010\u00058\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000b¨\u0006\u0015"}, d2 = {"Lcom/transsion/shorttv_pugc/bean/StaffType;", "Ljava/io/Serializable;", "id", HttpUrl.FRAGMENT_ENCODE_SET, "name", HttpUrl.FRAGMENT_ENCODE_SET, "<init>", "(ILjava/lang/String;)V", "getId", "()I", "getName", "()Ljava/lang/String;", "component1", "component2", "copy", "equals", HttpUrl.FRAGMENT_ENCODE_SET, "other", HttpUrl.FRAGMENT_ENCODE_SET, "hashCode", "toString", "shortTvLib_release"}, k = 1, mv = {2, 1, 0}, xi = Sdk$SDKMetric.SDKMetricType.AD_SHOW_TO_VALIDATION_DURATION_MS_VALUE)
+/* loaded from: /home/user/Teezee-git/app_source/classes7.dex */
+public final /* data */ class StaffType implements Serializable {
+
+    @SerializedName("id")
+    private final int id;
+
+    @SerializedName("name")
+    private final String name;
+
+    public StaffType(int i, String str) {
+        this.id = i;
+        this.name = str;
+    }
+
+    public static /* synthetic */ StaffType copy$default(StaffType staffType, int i, String str, int i2, Object obj) {
+        if ((i2 & 1) != 0) {
+            i = staffType.id;
+        }
+        if ((i2 & 2) != 0) {
+            str = staffType.name;
+        }
+        return staffType.copy(i, str);
+    }
+
+    /* renamed from: component1, reason: from getter */
+    public final int getId() {
+        return this.id;
+    }
+
+    /* renamed from: component2, reason: from getter */
+    public final String getName() {
+        return this.name;
+    }
+
+    public final StaffType copy(int id, String name) {
+        return new StaffType(id, name);
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof StaffType)) {
+            return false;
+        }
+        StaffType staffType = (StaffType) other;
+        return this.id == staffType.id && Intrinsics.c(this.name, staffType.name);
+    }
+
+    public final int getId() {
+        return this.id;
+    }
+
+    public final String getName() {
+        return this.name;
+    }
+
+    public int hashCode() {
+        int i = this.id * 31;
+        String str = this.name;
+        return i + (str == null ? 0 : str.hashCode());
+    }
+
+    public String toString() {
+        return "StaffType(id=" + this.id + ", name=" + this.name + ")";
+    }
+}

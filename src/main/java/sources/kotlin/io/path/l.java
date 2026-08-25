@@ -1,0 +1,7 @@
+package kotlin.io.path;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes7.dex */
+public abstract /* synthetic */ class l {
+    public static /* synthetic */ void a() {
+    }
+}

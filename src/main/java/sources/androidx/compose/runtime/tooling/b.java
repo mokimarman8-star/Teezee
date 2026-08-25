@@ -1,0 +1,5 @@
+package androidx.compose.runtime.tooling;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes2.dex */
+public interface b extends a {
+}

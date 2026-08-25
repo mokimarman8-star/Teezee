@@ -1,0 +1,85 @@
+package com.transsion.shorttv;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes2.dex */
+public final class R$drawable {
+    public static int pay_order_id_bg_8 = 2131232162;
+    public static int short_tv_ad_bg_shape_play_list = 2131232438;
+    public static int short_tv_ad_btn_bg = 2131232439;
+    public static int short_tv_ad_circle_black_with_white_border = 2131232440;
+    public static int short_tv_ad_shape_bg_bg_ad = 2131232441;
+    public static int short_tv_ad_shape_btn_11_bg = 2131232442;
+    public static int short_tv_ad_shape_btn_14_bg = 2131232443;
+    public static int short_tv_ad_shape_btn_15_bg = 2131232444;
+    public static int short_tv_ad_shape_dp_4 = 2131232445;
+    public static int short_tv_ad_shape_imm_video_subject_bg = 2131232446;
+    public static int short_tv_ad_shape_store_mark_bg = 2131232447;
+    public static int short_tv_alert_dialog_bg = 2131232448;
+    public static int short_tv_alert_dialog_btn_primary_bg = 2131232449;
+    public static int short_tv_alert_dialog_btn_secondary_bg = 2131232450;
+    public static int short_tv_base_ic_ugc_new_success_toast = 2131232451;
+    public static int short_tv_bg_appointment_booked = 2131232452;
+    public static int short_tv_bg_brand_corner_4 = 2131232453;
+    public static int short_tv_bg_btn_01 = 2131232454;
+    public static int short_tv_bg_btn_01_radius_4 = 2131232455;
+    public static int short_tv_bg_category_cover_gradient = 2131232456;
+    public static int short_tv_bg_category_first_item = 2131232457;
+    public static int short_tv_bg_category_gradient = 2131232458;
+    public static int short_tv_bg_common_button = 2131232459;
+    public static int short_tv_bg_corner_tips_4 = 2131232460;
+    public static int short_tv_bg_corner_tips_rectangle_2 = 2131232461;
+    public static int short_tv_bg_download_guide_arrow = 2131232462;
+    public static int short_tv_bg_download_guide_bubble = 2131232463;
+    public static int short_tv_bg_music_corner_tips_4 = 2131232464;
+    public static int short_tv_bg_radius_4_color_black_80 = 2131232465;
+    public static int short_tv_bg_radius_4_color_white = 2131232466;
+    public static int short_tv_bg_radius_8_color_white = 2131232467;
+    public static int short_tv_bg_rank_title = 2131232468;
+    public static int short_tv_bg_shape_play_list_ad = 2131232469;
+    public static int short_tv_bg_video_list_tab_seleted = 2131232470;
+    public static int short_tv_black_gradient_up = 2131232471;
+    public static int short_tv_btn_disable = 2131232472;
+    public static int short_tv_btn_gray = 2131232473;
+    public static int short_tv_btn_normal = 2131232474;
+    public static int short_tv_btn_selector = 2131232475;
+    public static int short_tv_download_empty_btn_bg = 2131232476;
+    public static int short_tv_ep_bg = 2131232477;
+    public static int short_tv_ep_text_bg = 2131232478;
+    public static int short_tv_filter_title_gradient_bg = 2131232479;
+    public static int short_tv_home_mask_movie = 2131232480;
+    public static int short_tv_ic_arrow_down = 2131232481;
+    public static int short_tv_ic_arrow_up = 2131232482;
+    public static int short_tv_ic_category_star = 2131232483;
+    public static int short_tv_ic_comment = 2131232484;
+    public static int short_tv_ic_download = 2131232485;
+    public static int short_tv_ic_download_group_unselected = 2131232486;
+    public static int short_tv_ic_hot_white = 2131232487;
+    public static int short_tv_ic_language = 2131232488;
+    public static int short_tv_ic_language_unable = 2131232489;
+    public static int short_tv_ic_share = 2131232490;
+    public static int short_tv_ic_speed = 2131232491;
+    public static int short_tv_ic_tv = 2131232492;
+    public static int short_tv_layer_seekbar = 2131232493;
+    public static int short_tv_locked_btn_buy_bg = 2131232494;
+    public static int short_tv_music_iv_close = 2131232495;
+    public static int short_tv_progress = 2131232496;
+    public static int short_tv_progress_bg = 2131232497;
+    public static int short_tv_scrollbar_thumb = 2131232498;
+    public static int short_tv_selector_download_favorite = 2131232499;
+    public static int short_tv_selector_download_group_check = 2131232500;
+    public static int short_tv_selector_ic_favorite = 2131232501;
+    public static int short_tv_selector_ic_like = 2131232502;
+    public static int short_tv_selector_language = 2131232503;
+    public static int short_tv_selector_language_select_bg = 2131232504;
+    public static int short_tv_selector_short_tv_favorite_big = 2131232505;
+    public static int short_tv_shape_banner_bottom_bg = 2131232506;
+    public static int short_tv_shape_seekbar_bar = 2131232507;
+    public static int short_tv_shape_short_tv_dialog_bottom_bg = 2131232508;
+    public static int short_tv_space_tag_decoration = 2131232509;
+    public static int short_tv_tag_bg = 2131232510;
+    public static int short_tv_tag_text_bg = 2131232511;
+    public static int shott_tv_bg_video_list_tab_unseleted = 2131232512;
+    public static int view_ad_short_tv_bg = 2131232749;
+
+    private R$drawable() {
+    }
+}

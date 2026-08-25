@@ -1,0 +1,5 @@
+package com.google.firebase.messaging;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes5.dex */
+public abstract /* synthetic */ class m0 {
+}

@@ -1,0 +1,73 @@
+package com.pgl.ssdk;
+
+import android.content.Context;
+import android.graphics.Point;
+import android.provider.Settings;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes5.dex */
+public class c0 {
+    public static int a;
+    public static int b;
+    public static int c;
+    private static int d;
+    private static int e;
+    private static int f;
+
+    private static void a(Context context) {
+        if (context == null) {
+            return;
+        }
+        try {
+            new DisplayMetrics();
+            DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+            d = (int) displayMetrics.density;
+            c = displayMetrics.densityDpi;
+        } catch (Throwable unused) {
+        }
+    }
+
+    private static void b(Context context) {
+        try {
+            new DisplayMetrics();
+            DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+            e = (int) displayMetrics.xdpi;
+            f = (int) displayMetrics.ydpi;
+        } catch (Throwable unused) {
+        }
+    }
+
+    private static void c(Context context) {
+        try {
+            Display defaultDisplay = ((WindowManager) context.getSystemService("window")).getDefaultDisplay();
+            Point point = new Point();
+            defaultDisplay.getRealSize(point);
+            a = point.x;
+            b = point.y;
+        } catch (Throwable unused) {
+        }
+    }
+
+    public static String d(Context context) {
+        int i = -1;
+        if (context != null) {
+            try {
+                i = Settings.System.getInt(context.getContentResolver(), "screen_brightness", -1);
+            } catch (Throwable unused) {
+            }
+        }
+        return String.valueOf(i);
+    }
+
+    public static String e(Context context) {
+        try {
+            c(context);
+            a(context);
+            b(context);
+        } catch (Throwable unused) {
+        }
+        return c + "[<!>]" + a + "," + b + "[<!>]";
+    }
+}

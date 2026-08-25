@@ -1,0 +1,86 @@
+package com.transsnet.downloader;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes.dex */
+public final class R$drawable {
+    public static int app_download_star = 2131230924;
+    public static int bg_btn_dialog_gray = 2131230961;
+    public static int bg_btn_module_05 = 2131230962;
+    public static int bg_btn_permission = 2131230964;
+    public static int bg_btn_subtitle_08 = 2131230967;
+    public static int bg_btn_subtitle_download_08 = 2131230968;
+    public static int bg_dialog_transfer_guide_16 = 2131230990;
+    public static int bg_gray10_radius_6 = 2131230999;
+    public static int bg_invite_8dp = 2131231016;
+    public static int bg_module_05_radius_4 = 2131231045;
+    public static int bg_progress_bar_pause = 2131231077;
+    public static int bg_progress_save_loading = 2131231078;
+    public static int bg_res_ep_tab = 2131231125;
+    public static int bg_shape_download_tab_second_selected = 2131231143;
+    public static int bg_shape_download_tab_selected = 2131231144;
+    public static int bg_shape_download_tab_unselected = 2131231145;
+    public static int bg_shape_newcomer_guide_dw_title_bg = 2131231147;
+    public static int bg_shorts_downloaded_tips = 2131231153;
+    public static int bg_shorts_label = 2131231154;
+    public static int bg_ugc_dot_gray = 2131231175;
+    public static int bg_ugc_dot_white = 2131231176;
+    public static int button_normal_bg = 2131231207;
+    public static int circle_progress_bar_list = 2131231212;
+    public static int comment_edit_cursor = 2131231217;
+    public static int download_2_bg_4 = 2131231255;
+    public static int download_3_point_more = 2131231256;
+    public static int download_bg_module_16 = 2131231258;
+    public static int download_empty_btn_bg = 2131231260;
+    public static int download_main_tab_bg = 2131231262;
+    public static int download_mask_cl45_30p_to_0p = 2131231263;
+    public static int download_progress_drawable = 2131231264;
+    public static int download_progress_drawable_trans = 2131231265;
+    public static int download_shape_confirm_dialog_btn_bg = 2131231266;
+    public static int download_shape_go_to_settings = 2131231267;
+    public static int download_shape_iv_bottom_bg = 2131231268;
+    public static int download_shape_save_to_bg = 2131231269;
+    public static int ic_download_check_unselected_text_02 = 2131231465;
+    public static int ic_download_group_selected = 2131231466;
+    public static int ic_download_group_unable = 2131231467;
+    public static int ic_download_group_unselected = 2131231468;
+    public static int ic_download_hd = 2131231469;
+    public static int ic_download_home = 2131231470;
+    public static int ic_download_home_fit_dark = 2131231471;
+    public static int ic_download_more = 2131231472;
+    public static int ic_download_pause = 2131231473;
+    public static int ic_download_phone_storage = 2131231474;
+    public static int ic_download_sdcard = 2131231475;
+    public static int ic_transfer_send_none = 2131231634;
+    public static int ic_transfer_send_none_error = 2131231635;
+    public static int icon_light_download_black = 2131231656;
+    public static int menu_item_selector = 2131231942;
+    public static int progress_download_analyzing = 2131232277;
+    public static int selector_download_episode_bg = 2131232328;
+    public static int selector_download_group_check = 2131232329;
+    public static int selector_download_list_status = 2131232330;
+    public static int selector_download_path_check = 2131232331;
+    public static int selector_download_resolution_bg = 2131232332;
+    public static int selector_download_resolution_more = 2131232333;
+    public static int selector_download_short_tv_favorite = 2131232334;
+    public static int selector_list_tab_bg = 2131232337;
+    public static int selector_transfer_select_check = 2131232342;
+    public static int selector_video_detail_seasons_bg = 2131232351;
+    public static int shape_download_dialog_bg = 2131232370;
+    public static int shape_download_group_button = 2131232371;
+    public static int shape_download_icon_status = 2131232372;
+    public static int shape_download_icon_status_dark = 2131232373;
+    public static int shape_download_icon_status_home = 2131232374;
+    public static int shape_download_icon_tips = 2131232375;
+    public static int shape_download_more_dialog_divider_line = 2131232376;
+    public static int shape_download_save_loading_bg = 2131232377;
+    public static int shape_download_series_btn_bg = 2131232378;
+    public static int shape_download_series_top_bg = 2131232379;
+    public static int shape_download_series_top_bg_2 = 2131232380;
+    public static int shape_downloading_cover_fg = 2131232381;
+    public static int shape_transfer_select_icon_bg = 2131232431;
+    public static int space_short_tv_tag_decoration = 2131232513;
+    public static int top_right_corner_3_point = 2131232556;
+    public static int treasure_50_0_0_50_f12_shape = 2131232583;
+
+    private R$drawable() {
+    }
+}

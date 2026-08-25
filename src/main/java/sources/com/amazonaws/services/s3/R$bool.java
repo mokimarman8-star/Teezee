@@ -1,0 +1,10 @@
+package com.amazonaws.services.s3;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes3.dex */
+public final class R$bool {
+    public static int abc_action_bar_embed_tabs = 2131034112;
+    public static int abc_config_actionMenuItemAllCaps = 2131034113;
+
+    private R$bool() {
+    }
+}

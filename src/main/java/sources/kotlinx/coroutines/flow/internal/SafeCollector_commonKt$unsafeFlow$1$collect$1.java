@@ -1,0 +1,23 @@
+package kotlinx.coroutines.flow.internal;
+
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+
+@Metadata(k = 3, mv = {2, 0, 0}, xi = 176)
+/* loaded from: /home/user/Teezee-git/app_source/classes7.dex */
+public final class SafeCollector_commonKt$unsafeFlow$1$collect$1 extends ContinuationImpl {
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ p this$0;
+
+    public SafeCollector_commonKt$unsafeFlow$1$collect$1(p pVar, Continuation<? super SafeCollector_commonKt$unsafeFlow$1$collect$1> continuation) {
+        super(continuation);
+    }
+
+    public final Object invokeSuspend(Object obj) {
+        this.result = obj;
+        this.label |= Integer.MIN_VALUE;
+        throw null;
+    }
+}

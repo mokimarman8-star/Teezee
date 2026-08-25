@@ -1,0 +1,36 @@
+package v9;
+
+import android.net.Uri;
+import java.util.Collections;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes4.dex */
+public final class h {
+    private static final AtomicLong h = new AtomicLong();
+    public final long a;
+    public final com.google.android.exoplayer2.upstream.n b;
+    public final Uri c;
+    public final Map d;
+    public final long e;
+    public final long f;
+    public final long g;
+
+    public h(long j, com.google.android.exoplayer2.upstream.n nVar, long j2) {
+        this(j, nVar, nVar.a, Collections.emptyMap(), j2, 0L, 0L);
+    }
+
+    public h(long j, com.google.android.exoplayer2.upstream.n nVar, Uri uri, Map map, long j2, long j3, long j4) {
+        this.a = j;
+        this.b = nVar;
+        this.c = uri;
+        this.d = map;
+        this.e = j2;
+        this.f = j3;
+        this.g = j4;
+    }
+
+    public static long a() {
+        return h.getAndIncrement();
+    }
+}

@@ -1,0 +1,81 @@
+package com.transsion.home;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes.dex */
+public final class R$string {
+    public static int appointment_add_success = 2131886167;
+    public static int appointment_delete_success = 2131886168;
+    public static int appointment_episode_alert_title = 2131886169;
+    public static int appointment_movie_alert_description = 2131886170;
+    public static int appointment_movie_alert_title = 2131886171;
+    public static int appointment_series_alert_description = 2131886172;
+    public static int apps_navigation = 2131886173;
+    public static int course_explore = 2131886350;
+    public static int course_learn = 2131886355;
+    public static int course_start_add = 2131886360;
+    public static int discover_more_movies = 2131886390;
+    public static int double_quotes = 2131886391;
+    public static int filter = 2131886699;
+    public static int filter_confirm = 2131886700;
+    public static int filter_more_title = 2131886701;
+    public static int filter_reset = 2131886702;
+    public static int home_button_fail = 2131886764;
+    public static int home_claim_now = 2131886765;
+    public static int home_discover_more = 2131886766;
+    public static int home_fail_try_again = 2131886767;
+    public static int home_grade_select_title = 2131886768;
+    public static int home_no_network_content = 2131886769;
+    public static int home_preferences_dialog_confirm = 2131886770;
+    public static int home_preferences_dialog_skip = 2131886771;
+    public static int home_preferences_max_select_tips = 2131886772;
+    public static int home_reset_text = 2131886773;
+    public static int home_retry_text = 2131886774;
+    public static int home_tab_education_title = 2131886776;
+    public static int home_tab_movie_title = 2131886777;
+    public static int home_tab_music_title = 2131886778;
+    public static int home_tab_name_animation = 2131886779;
+    public static int home_tab_name_education = 2131886780;
+    public static int home_tab_name_movie = 2131886781;
+    public static int home_tab_name_music = 2131886782;
+    public static int home_tab_name_shorttv = 2131886783;
+    public static int home_tab_name_trending = 2131886784;
+    public static int home_tab_name_tv_series = 2131886785;
+    public static int home_tab_trend_title = 2131886786;
+    public static int item_filter_for_u = 2131886833;
+    public static int item_filter_hottest = 2131886834;
+    public static int item_filter_latest = 2131886835;
+    public static int item_tab_hash_tag_for_you = 2131886836;
+    public static int item_tab_hash_tag_most_viewed = 2131886837;
+    public static int item_tab_hash_tag_new = 2131886838;
+    public static int movie_info_desc = 2131887480;
+    public static int music_tab_discover = 2131887558;
+    public static int music_tab_liked_music = 2131887559;
+    public static int must_play_games = 2131887561;
+    public static int newcomer_guide_tips_step_1 = 2131887582;
+    public static int newcomer_guide_tips_step_2 = 2131887583;
+    public static int newcomer_guide_tips_step_3 = 2131887584;
+    public static int no_calender_permission = 2131887586;
+    public static int no_filter_result = 2131887595;
+    public static int one_click_download_title = 2131887630;
+    public static int open_network_tip = 2131887636;
+    public static int pic = 2131887692;
+    public static int remind_me = 2131887873;
+    public static int reminder_set = 2131887874;
+    public static int room_title = 2131887917;
+    public static int score = 2131887921;
+    public static int search = 2131887923;
+    public static int search_all = 2131887924;
+    public static int search_guide_tip = 2131887930;
+    public static int search_guide_title = 2131887931;
+    public static int single_quotes = 2131888101;
+    public static int sport_live_living = 2131888113;
+    public static int sport_live_upcoming = 2131888114;
+    public static int str_checkin = 2131888164;
+    public static int str_ranking = 2131888199;
+    public static int subject_num = 2131888213;
+    public static int ugc_hashtag_page_title = 2131888511;
+    public static int video_built_in_tips = 2131888623;
+    public static int want_to_see = 2131888653;
+
+    private R$string() {
+    }
+}

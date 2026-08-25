@@ -1,0 +1,87 @@
+package com.cloud.hisavana.sdk;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes3.dex */
+public final class R$drawable {
+    public static int ad_99000000_12_12_12_12 = 2131230862;
+    public static int ad_action_but_bg = 2131230863;
+    public static int ad_disclaimer_gradient_drawable = 2131230865;
+    public static int ad_end_card_bg = 2131230866;
+    public static int ad_end_card_skip_bg = 2131230867;
+    public static int ad_hs_popupwindow_close = 2131230868;
+    public static int ad_hs_popupwindow_confirm_bg = 2131230869;
+    public static int ad_hs_popwindow_triangle = 2131230870;
+    public static int ad_hs_splash_bg = 2131230871;
+    public static int ad_hs_splash_slice = 2131230872;
+    public static int ad_i1107_bottom_appinfo_bg = 2131230873;
+    public static int ad_i1107_bottom_btn_bg = 2131230874;
+    public static int ad_i1107_bottom_btn_land_bg = 2131230875;
+    public static int ad_interstitial_bg = 2131230876;
+    public static int ad_left_score_bg = 2131230877;
+    public static int ad_reward_time_gift = 2131230879;
+    public static int ad_reward_time_gift_done = 2131230880;
+    public static int ad_rewarded_time_rest = 2131230881;
+    public static int ad_rewarded_time_rest_done = 2131230882;
+    public static int ad_skip_button = 2131230920;
+    public static int ad_ssp_r02_reward_tips_bg = 2131230921;
+    public static int ad_ssp_r02_reward_tips_gift = 2131230922;
+    public static int hisavana_ad_big = 2131231376;
+    public static int hisavana_ad_video_progress_91602_bg = 2131231377;
+    public static int hisavana_ad_video_progress_bg = 2131231378;
+    public static int hisavana_bg_blue_radius = 2131231379;
+    public static int hisavana_hollow_round = 2131231380;
+    public static int hisavana_hollow_round_i1107 = 2131231381;
+    public static int hisavana_hollow_rounded_rect = 2131231382;
+    public static int hisavana_play = 2131231383;
+    public static int hisavana_repeat = 2131231384;
+    public static int hisavana_round_gray_bg = 2131231385;
+    public static int hisavana_volume_close = 2131231386;
+    public static int hisavana_volume_close_i1107 = 2131231387;
+    public static int hisavana_volume_open = 2131231388;
+    public static int hisavana_volume_open_i1107 = 2131231389;
+    public static int hs_ad_arrow_down = 2131231394;
+    public static int hs_ad_arrow_up = 2131231395;
+    public static int hs_ad_bubble_close = 2131231396;
+    public static int hs_ad_bubble_icon_shadow = 2131231397;
+    public static int hs_ad_bubble_left = 2131231398;
+    public static int hs_ad_bubble_right = 2131231399;
+    public static int hs_ad_cancel = 2131231400;
+    public static int hs_ad_close = 2131231401;
+    public static int hs_ad_close1 = 2131231402;
+    public static int hs_ad_close2 = 2131231403;
+    public static int hs_ad_close_white = 2131231404;
+    public static int hs_ad_dialog_button_background = 2131231405;
+    public static int hs_ad_download = 2131231406;
+    public static int hs_ad_downloads = 2131231407;
+    public static int hs_ad_error = 2131231408;
+    public static int hs_ad_expand = 2131231409;
+    public static int hs_ad_halfstar = 2131231410;
+    public static int hs_ad_heart = 2131231411;
+    public static int hs_ad_indicator_right = 2131231412;
+    public static int hs_ad_info = 2131231413;
+    public static int hs_ad_link = 2131231414;
+    public static int hs_ad_login_back_vuid = 2131231415;
+    public static int hs_ad_miniapp_default_icon = 2131231416;
+    public static int hs_ad_nostar = 2131231417;
+    public static int hs_ad_pg = 2131231418;
+    public static int hs_ad_score = 2131231419;
+    public static int hs_ad_star = 2131231420;
+    public static int ssp_ad_bubble_card_bg = 2131232517;
+    public static int ssp_ad_bubble_card_bg_gradient = 2131232518;
+    public static int ssp_ad_bubble_logo_bg = 2131232519;
+    public static int ssp_bg_0052e2_4_4_4_4 = 2131232520;
+    public static int ssp_bg_80000000_radius_4 = 2131232521;
+    public static int ssp_bg_border_e6e6e6_radius_4 = 2131232522;
+    public static int ssp_bg_border_radius_4 = 2131232523;
+    public static int ssp_bg_e7e8ea_radius_8 = 2131232524;
+    public static int ssp_bg_ffffff_0_0_8_8 = 2131232525;
+    public static int ssp_bg_ffffff_0_8_0_8 = 2131232526;
+    public static int ssp_bg_ffffff_16_16_16_16 = 2131232527;
+    public static int ssp_bg_ffffff_8_8_0_0 = 2131232528;
+    public static int ssp_bg_ffffff_8_8_8_8 = 2131232529;
+    public static int ssp_bg_white_radius = 2131232530;
+    public static int ssp_bg_white_radius_12 = 2131232531;
+    public static int ssp_no_network = 2131232532;
+
+    private R$drawable() {
+    }
+}

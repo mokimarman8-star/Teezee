@@ -1,0 +1,40 @@
+package com.transsion.player.exo;
+
+import android.app.Notification;
+import android.app.PendingIntent;
+import androidx.media3.common.util.a1;
+import androidx.media3.exoplayer.offline.DownloadManager;
+import androidx.media3.exoplayer.offline.DownloadService;
+import androidx.media3.exoplayer.scheduler.PlatformScheduler;
+import com.transsion.player.R$mipmap;
+import com.transsion.player.R$string;
+import e2.f;
+import in.a;
+import java.util.List;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes6.dex */
+public class DemoDownloadService extends DownloadService {
+    public DemoDownloadService() {
+        super(0, 1000L, "download_channel", R$string.exo_download_notification_channel_name, 0);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    protected DownloadManager m() {
+        DownloadManager h = a.h(this);
+        a.i(this);
+        return h;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    protected Notification n(List list, int i) {
+        return a.i(this).b(this, R$mipmap.player_ic_download, (PendingIntent) null, (String) null, list, i);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    protected f q() {
+        if (a1.a >= 21) {
+            return new PlatformScheduler(this, 1);
+        }
+        return null;
+    }
+}

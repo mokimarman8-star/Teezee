@@ -1,0 +1,46 @@
+package kotlinx.coroutines.internal;
+
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.CoroutineContext;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.CoroutineStackFrame;
+import kotlin.jvm.JvmField;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes7.dex */
+public class v extends kotlinx.coroutines.a implements CoroutineStackFrame {
+
+    @JvmField
+    public final Continuation<Object> uCont;
+
+    public v(CoroutineContext coroutineContext, Continuation continuation) {
+        super(coroutineContext, true, true);
+        this.uCont = continuation;
+    }
+
+    protected void afterCompletion(Object obj) {
+        g.b(IntrinsicsKt.c(this.uCont), kotlinx.coroutines.c0.a(obj, this.uCont));
+    }
+
+    @Override // kotlinx.coroutines.a
+    protected void afterResume(Object obj) {
+        Continuation<Object> continuation = this.uCont;
+        continuation.resumeWith(kotlinx.coroutines.c0.a(obj, continuation));
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.CoroutineStackFrame
+    public final CoroutineStackFrame getCallerFrame() {
+        Continuation<Object> continuation = this.uCont;
+        if (continuation instanceof CoroutineStackFrame) {
+            return (CoroutineStackFrame) continuation;
+        }
+        return null;
+    }
+
+    public final StackTraceElement getStackTraceElement() {
+        return null;
+    }
+
+    protected final boolean isScopedCoroutine() {
+        return true;
+    }
+}

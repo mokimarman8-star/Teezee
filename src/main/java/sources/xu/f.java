@@ -1,0 +1,63 @@
+package xu;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import com.tn.lib.widget.TnTextView;
+import com.transsion.usercenter.R$id;
+import com.transsion.usercenter.R$layout;
+
+/* loaded from: /home/user/Teezee-git/app_source/classes7.dex */
+public final class f implements f4.a {
+    private final LinearLayout a;
+    public final View b;
+    public final FrameLayout c;
+    public final ImageView d;
+    public final TnTextView e;
+
+    private f(LinearLayout linearLayout, View view, FrameLayout frameLayout, ImageView imageView, TnTextView tnTextView) {
+        this.a = linearLayout;
+        this.b = view;
+        this.c = frameLayout;
+        this.d = imageView;
+        this.e = tnTextView;
+    }
+
+    public static f a(View view) {
+        TnTextView a;
+        int i = R$id.divider_line;
+        View a2 = f4.b.a(view, i);
+        if (a2 != null) {
+            i = R$id.flContainer;
+            FrameLayout frameLayout = (FrameLayout) f4.b.a(view, i);
+            if (frameLayout != null) {
+                i = R$id.ivBack;
+                ImageView imageView = (ImageView) f4.b.a(view, i);
+                if (imageView != null && (a = f4.b.a(view, (i = R$id.tvToolbarTitle))) != null) {
+                    return new f((LinearLayout) view, a2, frameLayout, imageView, a);
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i)));
+    }
+
+    public static f c(LayoutInflater layoutInflater) {
+        return d(layoutInflater, null, false);
+    }
+
+    public static f d(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z) {
+        View inflate = layoutInflater.inflate(R$layout.activity_manage_profiles, viewGroup, false);
+        if (z) {
+            viewGroup.addView(inflate);
+        }
+        return a(inflate);
+    }
+
+    /* renamed from: b, reason: merged with bridge method [inline-methods] */
+    public LinearLayout getRoot() {
+        return this.a;
+    }
+}
