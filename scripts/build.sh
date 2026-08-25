@@ -5,7 +5,6 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 VERSION="${1:-1.0.2}"
-# Strip leading 'v' if present
 VERSION="${VERSION#v}"
 
 echo "=========================================="
@@ -36,20 +35,26 @@ if [ ! -f "$KEYSTORE" ]; then
 fi
 
 # Step 1: Package ZIP
-echo "[1/4] Packaging APK contents..."
+#
+# FIX ("App not installed" root cause):
+#   - resources.arsc MUST be STORED (uncompressed) AND its data must be
+#     4-byte aligned. Android 11+ REFUSES to install targetSdk>=30 APKs
+#     whose resources.arsc is DEFLATED -> PackageManager error
+#     INSTALL_PARSE_FAILED_NO_CERTIFICATES / "App not installed".
+#   - We add resources.arsc FIRST with `zip -0` (stored), then add the
+#     rest DEFLATED. `zipalign -p 4` afterwards keeps it 4-aligned.
 TEMP_UNALIGNED="$DIST_DIR/unaligned_temp.apk"
 TEMP_ALIGNED="$DIST_DIR/aligned_temp.apk"
 FINAL_APK="$DIST_DIR/Teezee-v${VERSION}.apk"
 
-cd "$APP_SRC"
-zip -r -q "$TEMP_UNALIGNED" . *
-cd "$ROOT_DIR"
+echo "[1/4] Packaging APK contents..."
+( cd "$APP_SRC" \
+  && zip -q -X -0 "$TEMP_UNALIGNED" resources.arsc \
+  && zip -q -X -r -9 "$TEMP_UNALIGNED" . -x "resources.arsc" )
 
-# Step 2: Zipalign 4-byte
-echo "[2/4] Aligning APK (4-byte alignment)..."
-zipalign -p -f -v 4 "$TEMP_UNALIGNED" "$TEMP_ALIGNED" > /dev/null
+echo "[2/4] Aligning APK (-p flag keeps uncompressed entries page/4-byte aligned)..."
+zipalign -f -p 4 "$TEMP_UNALIGNED" "$TEMP_ALIGNED"
 
-# Step 3: Sign APK with v1, v2, v3 schemes
 echo "[3/4] Signing APK with apksigner (v1, v2, v3)..."
 apksigner sign \
     --ks "$KEYSTORE" \
@@ -65,16 +70,22 @@ apksigner sign \
     --out "$FINAL_APK" \
     "$TEMP_ALIGNED"
 
-# Step 4: Verify APK
-echo "[4/4] Verifying APK signature..."
+echo "[4/4] Verifying APK..."
 apksigner verify --verbose --print-certs "$FINAL_APK"
 
-# Compute SHA256 Checksum
+echo "[*] Sanity checks (fail build if packaging regresses):"
+zipalign -c -p 4 "$FINAL_APK"
+ARSC_STORED=$(unzip -v "$FINAL_APK" resources.arsc | awk '$NF=="resources.arsc"{print $2}')
+if [ "$ARSC_STORED" != "Stored" ]; then
+    echo "[-] FATAL: resources.arsc is not Stored (got: $ARSC_STORED)"
+    exit 1
+fi
+echo "[+] resources.arsc is Stored & aligned; signature verified."
+
 cd "$DIST_DIR"
 sha256sum "Teezee-v${VERSION}.apk" > "Teezee-v${VERSION}.apk.sha256"
 cd "$ROOT_DIR"
 
-# Clean temp files
 rm -f "$TEMP_UNALIGNED" "$TEMP_ALIGNED"
 
 echo "=========================================="
