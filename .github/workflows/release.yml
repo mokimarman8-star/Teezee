@@ -95,6 +95,30 @@ jobs:
             echo "tag=$TAG"
           } >> "$GITHUB_OUTPUT"
 
+      - name: Restore signing keystore from repository secrets
+        env:
+          TEEZEE_KEYSTORE_B64: ${{ secrets.TEEZEE_KEYSTORE_B64 }}
+          TEEZEE_KEY_ALIAS: ${{ secrets.TEEZEE_KEY_ALIAS }}
+          TEEZEE_STORE_PASSWORD: ${{ secrets.TEEZEE_STORE_PASSWORD }}
+          TEEZEE_KEY_PASSWORD: ${{ secrets.TEEZEE_KEY_PASSWORD }}
+        run: |
+          set -Eeuo pipefail
+          for required in TEEZEE_KEYSTORE_B64 TEEZEE_KEY_ALIAS TEEZEE_STORE_PASSWORD TEEZEE_KEY_PASSWORD; do
+            if [[ -z "${!required}" ]]; then
+              echo "Missing required repository secret: $required" >&2
+              exit 1
+            fi
+          done
+          KEYSTORE_PATH="$RUNNER_TEMP/teezee-release.jks"
+          printf '%s' "$TEEZEE_KEYSTORE_B64" | base64 --decode > "$KEYSTORE_PATH"
+          chmod 600 "$KEYSTORE_PATH"
+          {
+            echo "TEEZEE_KEYSTORE_PATH=$KEYSTORE_PATH"
+            echo "TEEZEE_KEY_ALIAS=$TEEZEE_KEY_ALIAS"
+            echo "TEEZEE_STORE_PASSWORD=$TEEZEE_STORE_PASSWORD"
+            echo "TEEZEE_KEY_PASSWORD=$TEEZEE_KEY_PASSWORD"
+          } >> "$GITHUB_ENV"
+
       - name: Build, align, sign and verify APK
         run: |
           set -Eeuo pipefail
