@@ -1,27 +1,37 @@
-# Teezee — Fresh Reconstruction Project
+# Teezee readable reconstruction
 
-This is the fresh readable reconstruction workspace for the exact Teezee Android package. It is published on the `fresh-reconstruction` branch of `mokimarman8-star/Teezee`; `teezee-app` was not accessed. The original package identity is preserved as `com.teezee.app`, with `com.transsion.subroom.activity.SplashActivity` as the launcher and `com.transsion.subroom.app.SubRoomApp` as the Application class.
+This is the readable reconstruction workspace for the exact Teezee Android package, maintained inside the existing `mokimarman8-star/Teezee` repository on the `fresh-reconstruction` branch. No second Teezee repository was created, and `teezee-app` was not accessed. The project name remains **Teezee** and the Android application ID remains `com.teezee.app`.
 
-Android does not allow a numeric application UID to be copied between installations. The device assigns that UID at install time. The portable identity is the application/package ID, manifest configuration, launcher icon, resources, assets, native ABI folders and signing/build metadata.
+## Preserved identity
 
-## Complete input and readable source
+The launcher remains `com.transsion.subroom.activity.SplashActivity`, the Application class remains `com.transsion.subroom.app.SubRoomApp`, and the original launcher icon, manifest resources, assets and ARM native libraries remain in the repository. Android assigns a numeric UID separately on each installation; that device-assigned number cannot legally or technically be copied into a fresh installation. The portable identity is the package ID, manifest configuration, branding, resources, assets, native ABI folders and signing relationship.
 
-The repository's existing `app_source/` directory contains the complete packaged input: manifest, ten DEX files, resources, assets and native libraries. `fresh-project/source-readable/` contains the readable reconstruction of the startup-critical files and decoded resources. The original packaged files remain preserved rather than being overwritten. `docs/` contains identity and verification reports.
+## Existing Teezee files
 
-## Rebuild
+The repository's existing `app_source/` directory preserves the complete packaged input: manifest, ten DEX files, resources, assets and native libraries. The tracked `src/main/java/sources/` tree contains the decompiled/readable source mirror, including the startup-critical `SplashActivity.java`, `MainActivity.java`, `BaseActivity.java`, `PermissionUtils.java` and `SubRoomApp.java`. The `fresh-project/source-readable/` directory contains the clearer explanations and reconstruction notes; it is documentation within this same Teezee repository, not a new application or a new repository.
 
-From the repository root, run the existing verified build engine:
+## Rebuild and release
+
+From the repository root, run the existing packaging engine:
 
 ```bash
-./scripts/build.sh
+./scripts/build.sh 1.0.12
 ```
 
-The `fresh-project/rebuild.sh` convenience wrapper documents the decoded local rebuild route. The output is written to the root `dist/` directory. The local `TeezeeFresh` bundle created during extraction contains a full Apktool mirror and can reproduce the decoded-resource rebuild independently.
+The engine packages the preserved `app_source/` tree, applies ZIP alignment, signs with the repository release keystore when available, verifies the APK signatures and writes a SHA-256 checksum in `dist/`. The convenience command below delegates to that same root build path and does not require a second project:
 
-## Startup fixes and reconstruction boundary
+```bash
+./fresh-project/rebuild.sh 1.0.12
+```
 
-The reconstructed startup flow makes storage permission checks non-blocking, adds a bounded SplashActivity fallback when optional ad/network callbacks do not return, and makes the launcher theme opaque with preview enabled. These changes are represented in the decoded local rebuild artifact; the readable files explain the intended source-level behavior.
+The GitHub workflow in `.github/workflows/release.yml` performs the same versioning, tag, build, signing, checksum and release-asset steps using the repository-scoped Actions token. It updates an existing release without deleting it and does not use the exposed personal token from chat.
 
-The decoded APK contains 52,677 smali files across ten DEX modules.
+## Current startup work
 
-The startup-critical files have been manually rewritten into readable source form, while the remaining files are preserved in the original packaged input so no code is discarded. Decompiled bytecode cannot restore original comments, source names, build history or proprietary dependency source word-for-word; the readable files therefore document behavior and safe launch flow rather than claiming impossible 100% original-source recovery.
+The tracked readable `SplashActivity.java` now schedules an eight-second, lifecycle-guarded fallback to `MainActivity` when optional splash-ad or network callbacks do not return. This is a source-level reconstruction and is separately documented in `docs/startup-crash-root-cause-analysis.md`. The original package also uses `bin.mt.signature.KillerApplication` and `libSignatureKiller.so`; because a real ARM-device stack trace is still unavailable, that security/signing path remains a documented crash suspect rather than being blindly disabled.
+
+## Reconstruction boundary
+
+The decoded APK contains 52,677 smali files across ten DEX modules and approximately 1,500 decoded layout/resource files. Packaged evidence identifies home, movie, short-TV, room/community, player, subtitle, audio-track, language, likes/follows, profile, download and transfer UI families. Static APK inspection cannot recover private server data, live recommendation results, user-specific likes, authenticated responses or original source comments/build history. Those parts are recorded as runtime-dependent instead of being invented.
+
+The readable files are therefore a behaviorally documented and progressively editable reconstruction, not a claim that an APK can restore the impossible word-for-word original source. A definitive common startup-crash fix still requires a readable Android/MIUI crash detail or ADB log captured immediately after launch on a compatible ARM phone.
