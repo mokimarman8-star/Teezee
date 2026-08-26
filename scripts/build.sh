@@ -13,10 +13,28 @@ echo "=========================================="
 
 DIST_DIR="$ROOT_DIR/dist"
 APP_SRC="$ROOT_DIR/app_source"
-KEYSTORE="$ROOT_DIR/keystore/release.jks"
-KS_PASS="password123"
-KEY_PASS="password123"
-KEY_ALIAS="teezee"
+KEYSTORE="${TEEZEE_KEYSTORE_PATH:-$ROOT_DIR/keystore/release.jks}"
+KEY_ALIAS="${TEEZEE_KEY_ALIAS:-}"
+KS_PASS="${TEEZEE_STORE_PASSWORD:-}"
+KEY_PASS="${TEEZEE_KEY_PASSWORD:-}"
+PROPERTIES_FILE="${TEEZEE_KEYSTORE_PROPERTIES:-$ROOT_DIR/keystore/keystore.properties}"
+
+# Credentials may come from GitHub Actions secrets or an ignored local
+# properties file. Parse values as data; never source/execute the file.
+read_property() {
+    local key="$1"
+    [ -f "$PROPERTIES_FILE" ] || return 0
+    awk -F= -v wanted="$key" '$1 == wanted {sub(/^[^=]*=/, ""); print; exit}' "$PROPERTIES_FILE"
+}
+KEY_ALIAS="${KEY_ALIAS:-$(read_property keyAlias)}"
+KS_PASS="${KS_PASS:-$(read_property storePassword)}"
+KEY_PASS="${KEY_PASS:-$(read_property keyPassword)}"
+
+if [ -z "$KEY_ALIAS" ] || [ -z "$KS_PASS" ] || [ -z "$KEY_PASS" ]; then
+    echo "[-] Signing credentials are missing." >&2
+    echo "    Set TEEZEE_KEY_ALIAS, TEEZEE_STORE_PASSWORD and TEEZEE_KEY_PASSWORD." >&2
+    exit 1
+fi
 
 mkdir -p "$DIST_DIR"
 rm -f "$DIST_DIR"/*.apk "$DIST_DIR"/*.sha256
@@ -27,11 +45,9 @@ if [ ! -d "$APP_SRC" ]; then
 fi
 
 if [ ! -f "$KEYSTORE" ]; then
-    echo "[*] Keystore not found, generating new release keystore..."
-    keytool -genkey -v -keystore "$KEYSTORE" -alias "$KEY_ALIAS" \
-        -keyalg RSA -keysize 2048 -validity 10000 \
-        -storepass "$KS_PASS" -keypass "$KEY_PASS" \
-        -dname "CN=Teezee, OU=App, O=Teezee, C=IN"
+    echo "[-] Release keystore not found at $KEYSTORE" >&2
+    echo "    Refusing to generate a new signing key automatically." >&2
+    exit 1
 fi
 
 # Step 1: Package ZIP
