@@ -1,23 +1,27 @@
 # Teezee — Fresh Reconstruction Project
 
-This project is a fresh, self-contained reconstruction workspace for the exact Teezee Android package. The original package identity is preserved as `com.teezee.app`, with `com.transsion.subroom.activity.SplashActivity` as the launcher and `com.transsion.subroom.app.SubRoomApp` as the Application class.
+This is the fresh readable reconstruction workspace for the exact Teezee Android package. It is published on the `fresh-reconstruction` branch of `mokimarman8-star/Teezee`; `teezee-app` was not accessed. The original package identity is preserved as `com.teezee.app`, with `com.transsion.subroom.activity.SplashActivity` as the launcher and `com.transsion.subroom.app.SubRoomApp` as the Application class.
 
 Android does not allow a numeric application UID to be copied between installations. The device assigns that UID at install time. The portable identity is the application/package ID, manifest configuration, launcher icon, resources, assets, native ABI folders and signing/build metadata.
 
-## Contents
+## Complete input and readable source
 
-`rebuild-input/` contains the complete decoded APK input: ten DEX/smali modules, manifest, resources, assets, native libraries and unknown packaged files. `extracted/source-readable/` contains the file-by-file readable reconstruction of the startup-critical source files. `docs/` contains identity and verification reports. `rebuild.sh` reproduces the decoded APK build, zip alignment and local v1/v2/v3 signing without changing the original Teezee workspace.
+The repository's existing `app_source/` directory contains the complete packaged input: manifest, ten DEX files, resources, assets and native libraries. `fresh-project/source-readable/` contains the readable reconstruction of the startup-critical files and decoded resources. The original packaged files remain preserved rather than being overwritten. `docs/` contains identity and verification reports.
 
 ## Rebuild
 
-Run:
+From the repository root, run the existing verified build engine:
 
 ```bash
-./rebuild.sh
+./scripts/build.sh
 ```
 
-The output is written to `build/Teezee.apk`. Because this APK is rebuilt with a local certificate, it must be installed after uninstalling any package signed with a different certificate. The package still contains only `arm64-v8a` and `armeabi-v7a` native libraries.
+The `fresh-project/rebuild.sh` convenience wrapper documents the decoded local rebuild route. The output is written to the root `dist/` directory. The local `TeezeeFresh` bundle created during extraction contains a full Apktool mirror and can reproduce the decoded-resource rebuild independently.
 
-## Reconstruction scope
+## Startup fixes and reconstruction boundary
 
-The decoded APK contains 52,677 smali files across ten DEX modules. The startup-critical files have been manually rewritten into readable source form, while the remaining files are preserved in decoded smali form so no packaged code is discarded. Decompiled bytecode cannot restore original comments, source names, build history or proprietary dependency source word-for-word; the readable files therefore document behavior and safe launch flow rather than claiming original-source recovery.
+The reconstructed startup flow makes storage permission checks non-blocking, adds a bounded SplashActivity fallback when optional ad/network callbacks do not return, and makes the launcher theme opaque with preview enabled. These changes are represented in the decoded local rebuild artifact; the readable files explain the intended source-level behavior.
+
+The decoded APK contains 52,677 smali files across ten DEX modules.
+
+The startup-critical files have been manually rewritten into readable source form, while the remaining files are preserved in the original packaged input so no code is discarded. Decompiled bytecode cannot restore original comments, source names, build history or proprietary dependency source word-for-word; the readable files therefore document behavior and safe launch flow rather than claiming impossible 100% original-source recovery.
