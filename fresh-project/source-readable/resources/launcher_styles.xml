@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.AppStart" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Show the launcher background during startup; never use a transparent window. -->
+        <item name="android:windowBackground">@drawable/background_launcher</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="AppTheme.AppStart.Compat" parent="@style/AppTheme.AppStart" />
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.transsion.baseui.widget.RoundedConstraintLayout android:layout_width="104.0dp" android:layout_height="48.0dp" app:cornerRadius="4.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/sub_operation_filter_icon" android:layout_width="0.0dp" android:layout_height="match_parent" android:scaleType="centerCrop" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="1.0" />
+    <com.tn.lib.widget.TnTextView android:textColor="@color/text_02" android:ellipsize="end" android:id="@id/sub_operation_filter_title" android:singleLine="true" android:paddingStart="8.0dp" android:paddingEnd="4.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/style_medium_text" />
+    <ImageView android:id="@id/sub_operation_filter_add_icon" android:visibility="gone" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@mipmap/ic_sub_operation_filter" android:contentDescription="@string/filter" android:layout_marginEnd="10.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/white" />
+</com.transsion.baseui.widget.RoundedConstraintLayout>

@@ -16,28 +16,14 @@ public class PermissionUtils {
     private static final String KEY_AVOID = "avoid_permission";
     private static final String PREFS = "perm_prefs";
 
+    /**
+     * Startup must remain usable without storage access. Downloads can request
+     * the appropriate permission at the point where the user chooses a download.
+     * This method intentionally performs no Settings redirect or modal prompt.
+     */
     public static void ensurePermission(Context context) {
-        if (context instanceof Activity) {
-            final Activity activity = (Activity) context;
-            if (!getUserAvoid(activity) && !hasPermission(activity)) {
-                new Handler(Looper.getMainLooper()).post(new Runnable() { // from class: com.PermissionUtils.1
-                    @Override // java.lang.Runnable
-                    public void run() {
-                        new AlertDialog.Builder(activity).setTitle("Storage Permission Needed").setMessage("Do you want to save the contents to external storage?").setCancelable(false).setPositiveButton("Grant", new DialogInterface.OnClickListener() { // from class: com.PermissionUtils.1.2
-                            @Override // android.content.DialogInterface.OnClickListener
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                PermissionUtils.requestPermission(activity);
-                            }
-                        }).setNegativeButton("No thanks", new DialogInterface.OnClickListener() { // from class: com.PermissionUtils.1.1
-                            @Override // android.content.DialogInterface.OnClickListener
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                PermissionUtils.setUserAvoid(activity, true);
-                            }
-                        }).show();
-                    }
-                });
-            }
-        }
+        // Intentionally non-blocking. See requestPermission(Activity) for the
+        // explicit, user-initiated download path.
     }
 
     private static boolean hasPermission(Context context) {
