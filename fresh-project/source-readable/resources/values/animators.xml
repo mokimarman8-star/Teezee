@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <animator name="m3_card_elevated_state_list_anim">@animator/mtrl_extended_fab_change_size_expand_motion_spec</animator>
+</resources>

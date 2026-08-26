@@ -1,0 +1,4 @@
+rebuild-input/
+build/
+*.apk
+*.jks

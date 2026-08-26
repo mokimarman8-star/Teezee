@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Keep a visible, deterministic startup background while the app boots. -->
+    <item android:drawable="@color/gray_dark_00" />
+
+    <!-- Small launch hint at the bottom of the splash screen. -->
+    <item
+        android:gravity="center|bottom"
+        android:bottom="54dp">
+        <bitmap android:src="@mipmap/launch_tips" />
+    </item>
+
+    <!-- Centered Teezee logo. -->
+    <item
+        android:gravity="center"
+        android:width="288dp"
+        android:height="288dp">
+        <bitmap android:src="@mipmap/launch_logo" />
+    </item>
+</layer-list>
