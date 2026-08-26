@@ -8,3 +8,8 @@ dist/
 .DS_Store
 Thumbs.db
 *.log
+
+# Private signing material (keep release credentials outside Git)
+keystore/*.jks
+keystore/*.keystore
+keystore/*.properties
