@@ -47,6 +47,9 @@ import wf.a;
 @SourceDebugExtension
 /* loaded from: /home/user/Teezee-git/app_source/classes.dex */
 public final class SplashActivity extends AppCompatActivity {
+    /** Optional splash-ad/config work must never block the launcher indefinitely. */
+    private static final long STARTUP_WATCHDOG_MS = 8000L;
+
     public static final a g = new a((DefaultConstructorMarker) null);
 
     /* renamed from: a, reason: from kotlin metadata */
@@ -72,6 +75,15 @@ public final class SplashActivity extends AppCompatActivity {
 
     /* renamed from: f, reason: from kotlin metadata */
     private long startTime;
+
+    private final Runnable startupWatchdog = new Runnable() {
+        @Override
+        public void run() {
+            if (!isFinishing() && !isDestroyed() && !isBackups) {
+                a0("time_out", null);
+            }
+        }
+    };
 
     private final void Y() {
         com.transsion.baselib.report.launch.b bVar = com.transsion.baselib.report.launch.b.a;
@@ -201,6 +213,8 @@ public final class SplashActivity extends AppCompatActivity {
     @Override // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Keep the ad path, but guarantee a deterministic fallback to MainActivity.
+        Z().postDelayed(startupWatchdog, STARTUP_WATCHDOG_MS);
         AppStartReport appStartReport = AppStartReport.a;
         appStartReport.e(new AppStartDotState(AppStartDotState.SPLASH_START, 0L, 2, null));
         e1.a.b.a(this);
@@ -237,6 +251,7 @@ public final class SplashActivity extends AppCompatActivity {
 
     @Override // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
     protected void onDestroy() {
+        Z().removeCallbacks(startupWatchdog);
         super.onDestroy();
         k.f((String) null, this, 1, (Object) null);
         com.transsion.ad.bidding.splash.b bVar = this.splashManager;
