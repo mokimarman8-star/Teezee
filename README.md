@@ -3,25 +3,27 @@
 > **Clean, High-Performance Android Build & Automated CI/CD Release System**
 
 ## 📱 Project Overview
-Teezee is an Android media application featuring full native acceleration (ARM64-v8a & ARMEABI-v7a), modern Android 15 (API 35) runtime compatibility, and automated multi-scheme signing.
+Teezee is an Android media application preserving the exact package identity `com.teezee.app`, ARM64-v8a and armeabi-v7a native libraries, the original branding/resources, and automated multi-scheme APK packaging.
 
 ---
 
-## 🛠️ Key Improvements & Fixes
-- **Installation Fix**: Resolved signature validation and `META-INF` integrity conflicts that triggered `"App not installed"` on Android devices.
-- **Strict 4-Byte Zip Alignment**: Standard Android page alignment applied across all resources and native binaries.
-- **Multi-Scheme Signing**: Signed simultaneously with **v1 (JAR)**, **v2 (APK Signature Scheme)**, and **v3 (APK Signature Scheme v3)**.
-- **Automated CI/CD**: Automatic semantic tag incrementing (`v1.0.2`, `v1.0.3`...), signed APK build, and automated GitHub Release publishing.
+## 🛠️ Packaging and reconstruction status
+- **Package identity**: `com.teezee.app` and the original launcher/application declarations are preserved.
+- **APK packaging**: The build engine stores and aligns `resources.arsc`, then verifies v1, v2 and v3 signatures.
+- **Readable reconstruction**: Startup source, UI/resource inventories and feature boundaries are maintained under `src/main/java/sources/` and `fresh-project/`.
+- **Runtime validation boundary**: GitHub-hosted x86 runners cannot launch this ARM-only APK, and no compatible ARM-device stack trace is currently available; therefore the common phone crash is not claimed fixed.
 
 ---
 
 ## 🚀 Automated Release Workflow (GitHub Actions)
-Every push to `main` or manual trigger via **GitHub Actions** (`workflow_dispatch`) will:
-1. Detect the latest release tag and automatically bump the semantic version (e.g. `v1.0.2` -> `v1.0.3`).
-2. Package and zip-align the application.
-3. Sign the APK with release keys (`v1` + `v2` + `v3`).
+Every push to `main`, `v*` tag, or manual trigger via **GitHub Actions** (`workflow_dispatch`) will:
+1. Validate or compute a semantic version and create the tag when required.
+2. Restore the signing keystore only from repository secrets in a temporary runner path.
+3. Package, align, sign and verify the APK with v1, v2 and v3.
 4. Generate a SHA-256 checksum.
-5. Create a new GitHub Release with the tag and upload the signed APK (`Teezee-v<version>.apk`).
+5. Create or update the GitHub Release and upload `Teezee-v<version>.apk` plus its checksum without deleting an existing release.
+
+Before enabling the workflow, the repository owner must add `TEEZEE_KEYSTORE_B64`, `TEEZEE_KEY_ALIAS`, `TEEZEE_STORE_PASSWORD` and `TEEZEE_KEY_PASSWORD` under the repository's Actions secrets. The workflow fails closed when any is missing.
 
 ---
 
@@ -32,6 +34,7 @@ Every push to `main` or manual trigger via **GitHub Actions** (`workflow_dispatc
 - `zipalign`
 - `apksigner`
 - `zip` & `unzip`
+- A local signing keystore and credentials supplied through `TEEZEE_KEYSTORE_PATH`, `TEEZEE_KEY_ALIAS`, `TEEZEE_STORE_PASSWORD` and `TEEZEE_KEY_PASSWORD`, or an ignored `keystore/keystore.properties` file.
 
 ### Build Command
 ```bash
@@ -49,6 +52,8 @@ Output APK will be available in the `dist/` directory:
 ---
 
 ## 🔒 Security & Verification
+Signing files and credentials are intentionally not tracked in Git. The old tracked signing files were removed from the current branch; the signing certificate relationship is preserved only when the repository owner supplies the same keystore through protected secrets or a secure local path.
+
 To verify the APK signature locally:
 ```bash
 apksigner verify --verbose --print-certs dist/Teezee-v1.0.2.apk
